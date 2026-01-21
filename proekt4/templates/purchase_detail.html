@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Заказ №{{ purchase['id'] }} – YOHOR SHOP</title>
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="page-bg"></div>
+    <div class="page-gradient"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <a href="{{ url_for('index') }}" class="logo">
+                    <img src="{{ url_for('static', filename='logo.png') }}" alt="YOHOR SHOP" class="logo-img">
+                </a>
+                <nav class="menu">
+                    <a href="{{ url_for('description') }}" class="pill-link pill-link-primary">О нас</a>
+                    <a href="{{ url_for('catalog') }}" class="pill-link pill-link-primary">Каталог</a>
+                    <a href="{{ url_for('building_materials') }}" class="pill-link pill-link-primary">Стройматериалы</a>
+
+
+                    {% if user_role in ['admin', 'moder'] %}
+
+                    <a href="{{ url_for('admin_tickets', status='active') }}" class="menu-link pill-link">
+                        Тикеты{% if active_tickets_count %} ({{ active_tickets_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('admin_reviews') }}" class="menu-link pill-link">
+                        Отзывы
+                    </a>
+                    <a href="{{ url_for('admin_applications') }}" class="menu-link pill-link">
+                        Заявки{% if active_applications_count %} ({{ active_applications_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('cart') }}" class="menu-link pill-link">
+                        Корзина{% if cart_count %} ({{ cart_count }}){% endif %}
+                    </a>
+                    {% endif %}
+
+                    {% if user_role == 'admin' %}
+                    <a href="{{ url_for('admin_panel') }}" class="menu-link pill-link">
+                        Admin panel
+                    </a>
+                    {% endif %}
+
+                    {% if user_role == 'moder' %}
+                    <a href="{{ url_for('manage_software') }}" class="menu-link pill-link">
+                        Менеджмент товаров
+                    </a>
+                    <a href="{{ url_for('manage_room') }}" class="menu-link pill-link">
+                        Менеджмент квартир
+                    </a>
+                    {% endif %}
+
+
+                    {% if user_role in ['admin', 'moder'] %}
+                    <a href="{{ url_for('account') }}" class="pill-link pill-link-primary">Личный кабинет</a>
+                    {% endif %}
+
+
+                    {% if user_role in ['user'] %}
+                    <a href="{{ url_for('support') }}" class="menu-link pill-link">Поддержка</a>
+                    <a href="{{ url_for('cart') }}" class="pill-link pill-link-primary">
+                        Корзина{% if cart_count %} ({{ cart_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('account') }}" class="pill-link pill-link-primary">Личный кабинет</a>
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container" style="max-width: 960px;">
+                <div class="glass" style="padding: 24px 26px 28px; border-radius: 18px;">
+
+                    <!-- Заголовок заказа -->
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+                        <div>
+                            <h1 style="margin: 0 0 6px; font-size: 22px;">
+                                Заказ № {{ purchase['id'] }}
+                            </h1>
+                            <p style="margin: 0; font-size: 13px; color: var(--text-muted);">
+                                Оформлен: {{ purchase['purchased_at'] if purchase['purchased_at'] is defined else
+                                purchase['created_at'] }}
+                            </p>
+                            {% if purchase['status'] is defined %}
+                            <p style="margin: 4px 0 0; font-size: 12px; color: var(--text-muted);">
+                                Статус: <strong>{{ purchase['status'] }}</strong>
+                            </p>
+                            {% endif %}
+                        </div>
+                        <img src="{{ url_for('static', filename='logo.png') }}" alt="YOHOR SHOP" class="logo-img"
+                            style="height: 40px">
+                    </div>
+
+                    <div class="product-detail-body" style="gap: 20px;">
+
+                        <!-- Левая часть: позиции заказа -->
+                        <div class="glass" style="padding: 18px 20px 22px; border-radius: 16px;">
+                            <h2 style="margin: 0 0 10px; font-size: 18px;">Состав заказа</h2>
+
+                            {% if purchase_items %}
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                {% for item in purchase_items %}
+                                <article style="
+                                            padding: 10px 12px;
+                                            border-radius: 10px;
+                                            border: 1px solid rgba(148,163,184,0.35);
+                                            background: rgba(15,23,42,0.9);
+                                        ">
+                                    <div style="display: flex; justify-content: space-between; gap: 10px;">
+                                        <div>
+                                            <h3 style="margin: 0 0 4px; font-size: 15px;">
+                                                {{ item['software_name'] }}
+                                            </h3>
+                                            <p style="margin: 0 0 4px; font-size: 12px; color: var(--text-muted);">
+                                                Лицензий: {{ item['quantity'] }}
+                                            </p>
+                                            {% if item['developer'] is defined %}
+                                            <p style="margin: 0; font-size: 12px; color: var(--text-muted);">
+                                                Разработчик: {{ item['developer'] }}
+                                            </p>
+                                            {% endif %}
+                                        </div>
+                                        <div style="text-align: right; min-width: 150px;">
+                                            <div style="font-size: 13px; color: var(--text-muted);">
+                                                Цена за товар
+                                            </div>
+                                            <div class="product-card-price" style="font-size: 14px;">
+                                                {{ '%.2f'|format(item['price_at_purchase']) }} ₽
+                                            </div>
+                                            <div style="margin-top: 4px; font-size: 13px; color: var(--text-muted);">
+                                                Сумма:
+                                                <strong>
+                                                    {{ '%.2f'|format(item['quantity'] * item['price_at_purchase']) }} ₽
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            <p style="font-size: 14px; color: var(--text-muted);">
+                                Позиции заказа не найдены.
+                            </p>
+                            {% endif %}
+                        </div>
+
+                        <!-- Правая часть: сводка -->
+                        <aside class="product-detail-aside glass" style="border-radius: 16px;">
+                            <div class="product-detail-aside-inner">
+                                <h3>Итог по заказу</h3>
+                                <p style="margin: 0 0 10px; font-size: 13px; color: var(--text-muted);">
+                                    Общая сумма.
+                                </p>
+
+                                <div style="margin-bottom: 10px;">
+                                    <div style="font-size: 13px; color: var(--text-muted);">
+                                        Всего к оплате
+                                    </div>
+                                    <div style="font-size: 20px; font-weight: 700; color: #38bdf8;">
+                                        {{ '%.2f'|format(purchase['total_price']) }} ₽
+                                    </div>
+                                </div>
+
+                                {% if purchase['download_bundle_link'] is defined %}
+                                <a href="{{ purchase['download_bundle_link'] }}" class="btn btn-primary"
+                                    style="width: 100%; margin-top: 8px; display: inline-flex; justify-content: center;">
+                                    Скачать все программы
+                                </a>
+                                {% endif %}
+
+                                <a href="{{ url_for('purchases') }}" class="btn btn-ghost"
+                                    style="width: 100%; margin-top: 8px; display: inline-flex; justify-content: center;">
+                                    Вернуться к списку покупок
+                                </a>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <a href="{{ url_for('index') }}" class="logo logo--footer">
+                       <img src="{{ url_for('static', filename='logo.png') }}"  alt="YOHOR SHOP" class="logo__image">
+                    </a>
+                    <p class="footer__text">Маркетплейс услуг и стройматериалов</p>
+                    <p class="footer__copyright">© 2026 YOHOR SHOP</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">
+                        Навигация</h3>
+                    <ul class="footer__list">
+                        <li><a href="{{ url_for('index') }}">Главная</a></li>
+                        <li><a href="{{ url_for('catalog') }}">Каталог</a></li>
+                        <li><a href="{{ url_for('login') }}">Личный кабинет сотрудника</a></li>
+                        <li><a href="{{ url_for('privacy_policy') }}">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list">
+                        <li>Email: info@company24.com</li>
+                        <li>Телефон: +7 (950) 066-57-19</li>
+                        <li>Город Иркутск, Улица Баррикад</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
