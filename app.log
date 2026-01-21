@@ -1,0 +1,911 @@
+2026-01-18 22:08:37,370 - INFO - Database initialized successfully
+2026-01-18 22:08:37,615 - INFO - Database initialized successfully
+2026-01-18 22:08:39,864 - INFO - Loaded main page with bestsellers
+2026-01-18 22:08:44,820 - INFO - User logged in: moder@example.com
+2026-01-18 22:08:44,823 - INFO - Loaded main page with bestsellers
+2026-01-18 22:08:46,137 - INFO - User 3 viewed cart with 0 items
+2026-01-18 22:08:47,821 - INFO - Loaded main page with bestsellers
+2026-01-19 17:20:16,568 - INFO - Database initialized successfully
+2026-01-19 17:20:16,789 - INFO - Database initialized successfully
+2026-01-19 17:20:19,385 - INFO - Loaded main page with bestsellers
+2026-01-19 17:21:24,186 - INFO - Loaded main page with bestsellers
+2026-01-19 17:22:55,411 - INFO - Loaded main page with bestsellers
+2026-01-19 17:25:51,019 - INFO - Loaded main page with bestsellers
+2026-01-19 17:26:15,207 - INFO - Loaded main page with bestsellers
+2026-01-19 17:28:03,526 - INFO - Loaded main page with bestsellers
+2026-01-19 17:29:30,288 - INFO - Loaded main page with bestsellers
+2026-01-19 17:34:52,920 - INFO - User logged out: Тестовый модератор
+2026-01-19 17:34:52,925 - INFO - Loaded main page with bestsellers
+2026-01-19 17:43:42,890 - INFO - Loaded main page with bestsellers
+2026-01-19 17:43:43,638 - INFO - Loaded main page with bestsellers
+2026-01-19 17:46:06,506 - INFO - Database initialized successfully
+2026-01-19 17:46:08,385 - INFO - Loaded main page with bestsellers
+2026-01-19 17:46:09,052 - INFO - Loaded main page with bestsellers
+2026-01-19 17:46:09,217 - INFO - Loaded main page with bestsellers
+2026-01-19 17:46:11,059 - INFO - Loaded main page with bestsellers
+2026-01-19 17:52:21,850 - WARNING - Page not found: /static/images/logo.png
+2026-01-19 17:52:22,508 - WARNING - Page not found: /static/images/logo.png
+2026-01-19 17:57:53,303 - INFO - Loaded main page with bestsellers
+2026-01-19 17:57:55,915 - INFO - Loaded main page with bestsellers
+2026-01-19 17:57:58,332 - INFO - Loaded main page with bestsellers
+2026-01-19 18:02:50,699 - INFO - Loaded main page with bestsellers
+2026-01-19 18:03:09,849 - INFO - Loaded main page with bestsellers
+2026-01-19 18:07:31,221 - INFO - Loaded main page with bestsellers
+2026-01-19 18:08:06,173 - INFO - Loaded main page with bestsellers
+2026-01-19 18:08:58,370 - INFO - Loaded main page with bestsellers
+2026-01-19 18:26:21,646 - INFO - Loaded main page with bestsellers
+2026-01-19 18:26:28,077 - INFO - Loaded main page with bestsellers
+2026-01-19 18:27:10,435 - INFO - User logged in: admin@example.com
+2026-01-19 18:27:10,439 - INFO - Loaded main page with bestsellers
+2026-01-19 18:28:29,680 - INFO - Loaded main page with bestsellers
+2026-01-19 18:28:33,753 - INFO - Loaded main page with bestsellers
+2026-01-19 18:29:51,946 - INFO - User logged out: Администратор
+2026-01-19 18:29:51,950 - INFO - Loaded main page with bestsellers
+2026-01-19 18:35:01,894 - INFO - Database initialized successfully
+2026-01-19 18:35:04,029 - INFO - Loaded main page with bestsellers
+2026-01-19 18:39:10,081 - INFO - Loaded main page with bestsellers
+2026-01-19 18:39:10,724 - WARNING - Page not found: /static/buildings.png
+2026-01-19 18:39:25,353 - WARNING - Page not found: /static/buildings.png
+2026-01-19 18:39:40,156 - WARNING - Page not found: /static/buildings.png
+2026-01-19 18:42:39,692 - INFO - Loaded main page with bestsellers
+2026-01-19 18:45:54,392 - INFO - Database initialized successfully
+2026-01-19 18:49:25,380 - INFO - Database initialized successfully
+2026-01-19 18:54:52,172 - INFO - Database initialized successfully
+2026-01-19 18:55:03,033 - INFO - Database initialized successfully
+2026-01-19 18:55:12,472 - INFO - Database initialized successfully
+2026-01-19 18:58:28,941 - INFO - Database initialized successfully
+2026-01-19 18:58:29,136 - INFO - Database initialized successfully
+2026-01-19 18:58:31,386 - INFO - Loaded main page with bestsellers
+2026-01-19 18:58:37,484 - INFO - Loaded main page with bestsellers
+2026-01-19 18:58:43,208 - INFO - User logged in: admin@example.com
+2026-01-19 18:58:43,211 - INFO - Loaded main page with bestsellers
+2026-01-19 18:59:08,289 - INFO - Added to cart (user 1): software 9, quantity 1
+2026-01-19 18:59:08,289 - INFO - User 1 added Входная дверь to cart (qty: 1)
+2026-01-19 18:59:09,342 - INFO - User 1 viewed cart with 1 items
+2026-01-19 18:59:11,170 - INFO - Loaded main page with bestsellers
+2026-01-19 18:59:14,027 - INFO - Added to cart (user 1): software 9, quantity 1
+2026-01-19 18:59:14,027 - INFO - User 1 added Входная дверь to cart (qty: 1)
+2026-01-19 18:59:15,561 - INFO - Added to cart (user 1): software 9, quantity 1
+2026-01-19 18:59:15,562 - INFO - User 1 added Входная дверь to cart (qty: 1)
+2026-01-19 18:59:16,544 - INFO - Loaded main page with bestsellers
+2026-01-19 19:01:00,454 - INFO - Loaded main page with bestsellers
+2026-01-19 19:01:00,884 - INFO - Loaded main page with bestsellers
+2026-01-19 19:01:01,048 - INFO - Loaded main page with bestsellers
+2026-01-19 19:01:01,193 - INFO - Loaded main page with bestsellers
+2026-01-19 19:01:01,702 - INFO - Loaded main page with bestsellers
+2026-01-19 19:01:03,838 - INFO - User logged out: Администратор
+2026-01-19 19:01:03,841 - INFO - Loaded main page with bestsellers
+2026-01-19 19:01:04,376 - INFO - Loaded main page with bestsellers
+2026-01-19 19:07:09,264 - INFO - Loaded main page with bestsellers
+2026-01-19 19:07:14,128 - INFO - User logged in: admin@example.com
+2026-01-19 19:07:14,131 - INFO - Loaded main page with bestsellers
+2026-01-19 19:07:48,288 - INFO - Loaded main page with bestsellers
+2026-01-19 19:07:50,752 - INFO - Loaded main page with bestsellers
+2026-01-19 19:08:40,742 - INFO - Loaded main page with bestsellers
+2026-01-19 19:08:42,915 - INFO - Loaded main page with bestsellers
+2026-01-19 19:08:43,095 - INFO - Loaded main page with bestsellers
+2026-01-19 19:08:43,248 - INFO - Loaded main page with bestsellers
+2026-01-19 19:09:29,780 - INFO - Loaded main page with bestsellers
+2026-01-19 19:09:34,989 - INFO - Loaded main page with bestsellers
+2026-01-19 19:09:39,618 - INFO - User logged out: Администратор
+2026-01-19 19:09:39,622 - INFO - Loaded main page with bestsellers
+2026-01-19 19:11:39,704 - INFO - Loaded main page with bestsellers
+2026-01-19 19:11:42,311 - INFO - Loaded main page with bestsellers
+2026-01-19 19:13:10,375 - INFO - Database initialized successfully
+2026-01-19 19:13:11,618 - INFO - Database initialized successfully
+2026-01-19 19:13:13,673 - INFO - Loaded main page with bestsellers
+2026-01-19 19:13:15,287 - INFO - Loaded main page with bestsellers
+2026-01-19 19:13:37,629 - INFO - Loaded main page with bestsellers
+2026-01-19 19:13:38,378 - INFO - Loaded main page with bestsellers
+2026-01-19 19:13:42,371 - INFO - User logged in: admin@example.com
+2026-01-19 19:13:42,375 - INFO - Loaded main page with bestsellers
+2026-01-19 19:13:45,906 - INFO - User logged out: Администратор
+2026-01-19 19:13:45,910 - INFO - Loaded main page with bestsellers
+2026-01-19 19:13:46,485 - INFO - Loaded main page with bestsellers
+2026-01-19 19:13:58,195 - INFO - Loaded main page with bestsellers
+2026-01-19 19:16:20,878 - INFO - Loaded main page with bestsellers
+2026-01-19 19:17:01,154 - INFO - Loaded main page with bestsellers
+2026-01-19 19:17:01,612 - INFO - Loaded main page with bestsellers
+2026-01-19 19:17:01,809 - INFO - Loaded main page with bestsellers
+2026-01-19 19:17:01,970 - INFO - Loaded main page with bestsellers
+2026-01-19 19:17:02,167 - INFO - Loaded main page with bestsellers
+2026-01-19 19:17:14,724 - INFO - Loaded main page with bestsellers
+2026-01-19 19:17:14,888 - INFO - Loaded main page with bestsellers
+2026-01-19 19:17:15,047 - INFO - Loaded main page with bestsellers
+2026-01-19 19:30:39,057 - INFO - Loaded main page with bestsellers
+2026-01-19 19:33:22,128 - INFO - Loaded main page with bestsellers
+2026-01-19 19:34:30,115 - INFO - Loaded main page with bestsellers
+2026-01-19 19:35:29,922 - INFO - Loaded main page with bestsellers
+2026-01-19 19:36:32,911 - INFO - Loaded main page with bestsellers
+2026-01-19 19:36:39,747 - INFO - Loaded main page with bestsellers
+2026-01-19 19:36:48,546 - INFO - Loaded main page with bestsellers
+2026-01-19 19:36:58,321 - INFO - Loaded main page with bestsellers
+2026-01-19 19:37:32,879 - INFO - Loaded main page with bestsellers
+2026-01-19 19:38:45,600 - INFO - Loaded main page with bestsellers
+2026-01-19 19:38:53,089 - INFO - Loaded main page with bestsellers
+2026-01-19 19:38:53,516 - INFO - Loaded main page with bestsellers
+2026-01-19 19:39:04,383 - INFO - Loaded main page with bestsellers
+2026-01-19 19:39:17,955 - INFO - Loaded main page with bestsellers
+2026-01-19 19:39:41,918 - INFO - Loaded main page with bestsellers
+2026-01-19 19:40:14,154 - INFO - Loaded main page with bestsellers
+2026-01-19 19:41:13,640 - INFO - Loaded main page with bestsellers
+2026-01-19 19:42:04,518 - INFO - Loaded main page with bestsellers
+2026-01-19 19:42:18,322 - INFO - Loaded main page with bestsellers
+2026-01-19 19:42:24,267 - INFO - Loaded main page with bestsellers
+2026-01-19 19:42:24,751 - INFO - Loaded main page with bestsellers
+2026-01-19 19:42:24,958 - INFO - Loaded main page with bestsellers
+2026-01-19 19:42:25,147 - INFO - Loaded main page with bestsellers
+2026-01-19 19:42:25,312 - INFO - Loaded main page with bestsellers
+2026-01-19 19:42:33,114 - INFO - Loaded main page with bestsellers
+2026-01-19 19:42:33,346 - INFO - Loaded main page with bestsellers
+2026-01-19 19:42:38,542 - INFO - Loaded main page with bestsellers
+2026-01-19 19:42:44,849 - INFO - Loaded main page with bestsellers
+2026-01-19 19:43:01,614 - INFO - Loaded main page with bestsellers
+2026-01-19 19:43:07,205 - INFO - Loaded main page with bestsellers
+2026-01-19 19:43:13,463 - INFO - Loaded main page with bestsellers
+2026-01-19 19:45:09,435 - INFO - Loaded main page with bestsellers
+2026-01-19 19:46:03,059 - INFO - Loaded main page with bestsellers
+2026-01-19 19:46:13,472 - INFO - Loaded main page with bestsellers
+2026-01-19 19:47:22,687 - INFO - Loaded main page with bestsellers
+2026-01-19 20:07:39,528 - INFO - Loaded main page with bestsellers
+2026-01-19 20:14:22,651 - INFO - Loaded main page with bestsellers
+2026-01-19 20:17:33,659 - INFO - Database initialized successfully
+2026-01-19 20:17:52,429 - INFO - Loaded main page with bestsellers
+2026-01-19 20:17:52,857 - INFO - Loaded main page with bestsellers
+2026-01-19 20:17:53,267 - INFO - Loaded main page with bestsellers
+2026-01-19 20:17:53,437 - INFO - Loaded main page with bestsellers
+2026-01-19 20:18:11,970 - INFO - Loaded main page with bestsellers
+2026-01-19 20:18:12,137 - INFO - Loaded main page with bestsellers
+2026-01-19 20:18:46,603 - INFO - Loaded main page with bestsellers
+2026-01-19 20:19:23,243 - INFO - Database initialized successfully
+2026-01-19 20:19:25,097 - INFO - Loaded main page with bestsellers
+2026-01-19 20:20:39,785 - INFO - Database initialized successfully
+2026-01-19 20:20:41,161 - INFO - Loaded main page with bestsellers
+2026-01-19 20:21:02,112 - INFO - Loaded main page with bestsellers
+2026-01-19 20:21:03,910 - INFO - Loaded main page with bestsellers
+2026-01-19 20:35:56,841 - INFO - Database initialized successfully
+2026-01-19 20:35:59,357 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:35:59,358 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:38:05,779 - INFO - Loaded main page with bestsellers
+2026-01-19 20:38:58,051 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:38:58,052 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:39:11,274 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:39:11,277 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:39:11,737 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:39:11,739 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:39:19,815 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:39:19,817 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:40:15,123 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:40:15,125 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:40:15,572 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:40:15,575 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:40:15,763 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:40:15,764 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:40:15,917 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:40:15,919 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:40:38,311 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:40:38,312 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:40:43,251 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:40:43,253 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:42:38,285 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:42:38,287 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:42:47,788 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:42:47,789 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:42:49,588 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:42:49,589 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:42:53,854 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:42:53,855 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:46:36,732 - INFO - Loaded main page with bestsellers
+2026-01-19 20:46:37,778 - WARNING - Page not found: /static/apartments/apt1.jpg
+2026-01-19 20:46:37,779 - WARNING - Page not found: /static/apartments/apt2.jpg
+2026-01-19 20:53:22,300 - INFO - Database initialized successfully
+2026-01-19 21:16:39,681 - INFO - Database initialized successfully
+2026-01-19 21:17:44,187 - INFO - Database initialized successfully
+2026-01-19 21:17:50,431 - INFO - Database initialized successfully
+2026-01-19 21:17:53,554 - INFO - Database initialized successfully
+2026-01-19 21:21:40,496 - INFO - Database initialized successfully
+2026-01-19 21:21:47,179 - INFO - Database initialized successfully
+2026-01-19 21:25:12,108 - INFO - Database initialized successfully
+2026-01-19 21:25:12,311 - INFO - Database initialized successfully
+2026-01-19 21:25:16,606 - INFO - Loaded main page with bestsellers
+2026-01-19 21:25:19,682 - INFO - Loaded main page with bestsellers
+2026-01-19 21:25:26,851 - INFO - Loaded main page with bestsellers
+2026-01-19 21:25:30,011 - INFO - Loaded main page with bestsellers
+2026-01-19 21:26:00,718 - INFO - Database initialized successfully
+2026-01-19 21:26:08,006 - INFO - Database initialized successfully
+2026-01-19 21:26:12,714 - INFO - Loaded main page with bestsellers
+2026-01-19 21:27:08,324 - INFO - Loaded main page with bestsellers
+2026-01-19 21:28:18,657 - INFO - Loaded main page with bestsellers
+2026-01-19 21:29:40,304 - INFO - Loaded main page with bestsellers
+2026-01-19 21:31:28,363 - INFO - Database initialized successfully
+2026-01-19 21:31:50,938 - INFO - Database initialized successfully
+2026-01-19 21:31:51,158 - INFO - Database initialized successfully
+2026-01-19 21:31:57,612 - INFO - Loaded main page with bestsellers
+2026-01-19 21:31:59,878 - INFO - Loaded main page with bestsellers
+2026-01-19 21:32:01,569 - INFO - Loaded main page with bestsellers
+2026-01-19 21:32:31,555 - INFO - Database initialized successfully
+2026-01-19 21:32:44,827 - INFO - Loaded main page with bestsellers
+2026-01-19 21:32:46,943 - INFO - Loaded main page with bestsellers
+2026-01-19 21:32:51,297 - INFO - Loaded main page with bestsellers
+2026-01-19 21:32:56,555 - INFO - User logged in: admin@example.com
+2026-01-19 21:32:56,559 - INFO - Loaded main page with bestsellers
+2026-01-19 21:33:43,197 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:33:46,755 - WARNING - Page not found: /manage_software/1/static/logo.png
+2026-01-19 21:33:58,907 - INFO - Loaded main page with bestsellers
+2026-01-19 21:42:36,715 - INFO - Loaded main page with bestsellers
+2026-01-19 21:45:31,009 - INFO - Loaded main page with bestsellers
+2026-01-19 21:45:48,281 - INFO - Loaded main page with bestsellers
+2026-01-19 21:46:27,643 - INFO - Loaded main page with bestsellers
+2026-01-19 21:46:28,238 - INFO - Loaded main page with bestsellers
+2026-01-19 21:46:28,400 - INFO - Loaded main page with bestsellers
+2026-01-19 21:46:31,756 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:46:35,840 - INFO - Loaded main page with bestsellers
+2026-01-19 21:48:00,854 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:48:02,832 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:48:19,668 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:48:20,044 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:48:20,214 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:48:23,081 - INFO - Loaded main page with bestsellers
+2026-01-19 21:48:24,747 - INFO - Loaded main page with bestsellers
+2026-01-19 21:48:26,352 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:49:30,111 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:49:30,415 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:49:30,575 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:49:30,760 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:49:30,965 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:49:34,874 - INFO - Loaded main page with bestsellers
+2026-01-19 21:49:37,231 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:49:42,145 - INFO - Loaded main page with bestsellers
+2026-01-19 21:49:48,127 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-19 21:49:49,453 - INFO - Loaded main page with bestsellers
+2026-01-19 21:50:22,466 - INFO - Loaded main page with bestsellers
+2026-01-19 21:50:22,883 - INFO - Loaded main page with bestsellers
+2026-01-19 21:50:24,122 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-19 21:50:34,086 - INFO - Loaded main page with bestsellers
+2026-01-19 21:50:46,944 - INFO - Loaded main page with bestsellers
+2026-01-19 21:53:53,689 - INFO - Loaded main page with bestsellers
+2026-01-19 21:53:54,664 - INFO - Loaded main page with bestsellers
+2026-01-19 21:54:07,815 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-19 21:55:19,789 - INFO - Loaded main page with bestsellers
+2026-01-19 21:55:21,793 - INFO - User logged out: Администратор
+2026-01-19 21:55:21,798 - INFO - Loaded main page with bestsellers
+2026-01-19 21:55:25,770 - INFO - User logged in: moder@example.com
+2026-01-19 21:55:25,774 - INFO - Loaded main page with bestsellers
+2026-01-19 21:56:11,708 - INFO - Loaded main page with bestsellers
+2026-01-19 21:56:16,500 - INFO - User logged out: Тестовый модератор
+2026-01-19 21:56:16,504 - INFO - Loaded main page with bestsellers
+2026-01-19 21:57:02,968 - INFO - User logged in: admin@example.com
+2026-01-19 21:57:02,972 - INFO - Loaded main page with bestsellers
+2026-01-19 21:57:54,301 - INFO - Loaded main page with bestsellers
+2026-01-19 21:58:15,075 - INFO - Loaded main page with bestsellers
+2026-01-19 21:58:15,634 - INFO - Loaded main page with bestsellers
+2026-01-19 21:58:15,831 - INFO - Loaded main page with bestsellers
+2026-01-19 21:58:17,124 - INFO - Loaded main page with bestsellers
+2026-01-19 21:58:17,334 - INFO - Loaded main page with bestsellers
+2026-01-19 21:58:17,869 - INFO - Loaded main page with bestsellers
+2026-01-19 21:58:19,293 - INFO - Loaded main page with bestsellers
+2026-01-19 21:59:05,715 - INFO - User 1 viewed cart with 1 items
+2026-01-19 21:59:15,478 - INFO - User 1 viewed cart with 1 items
+2026-01-19 21:59:16,422 - INFO - Item 1 removed from cart
+2026-01-19 21:59:16,423 - INFO - Item 1 removed from cart
+2026-01-19 21:59:16,436 - INFO - User 1 viewed cart with 0 items
+2026-01-19 21:59:17,877 - INFO - Loaded main page with bestsellers
+2026-01-19 21:59:42,557 - INFO - Loaded main page with bestsellers
+2026-01-19 21:59:43,306 - INFO - Loaded main page with bestsellers
+2026-01-19 21:59:43,489 - INFO - Loaded main page with bestsellers
+2026-01-19 21:59:43,652 - INFO - Loaded main page with bestsellers
+2026-01-19 22:00:15,222 - INFO - Loaded main page with bestsellers
+2026-01-19 22:02:13,260 - INFO - Loaded main page with bestsellers
+2026-01-19 22:02:13,732 - INFO - Loaded main page with bestsellers
+2026-01-19 22:02:13,905 - INFO - Loaded main page with bestsellers
+2026-01-19 22:02:14,056 - INFO - Loaded main page with bestsellers
+2026-01-19 22:02:14,425 - INFO - Loaded main page with bestsellers
+2026-01-19 22:04:51,665 - INFO - Loaded main page with bestsellers
+2026-01-19 22:05:51,141 - INFO - Loaded main page with bestsellers
+2026-01-19 22:06:51,088 - INFO - Loaded main page with bestsellers
+2026-01-19 22:06:51,628 - INFO - Loaded main page with bestsellers
+2026-01-19 22:06:51,823 - INFO - Loaded main page with bestsellers
+2026-01-19 22:06:51,977 - INFO - Loaded main page with bestsellers
+2026-01-19 22:07:03,920 - INFO - Loaded main page with bestsellers
+2026-01-19 22:07:04,402 - INFO - Loaded main page with bestsellers
+2026-01-19 22:07:04,606 - INFO - Loaded main page with bestsellers
+2026-01-19 22:07:04,802 - INFO - Loaded main page with bestsellers
+2026-01-19 22:07:04,938 - INFO - Loaded main page with bestsellers
+2026-01-19 22:07:40,195 - INFO - Loaded main page with bestsellers
+2026-01-19 22:07:40,603 - INFO - Loaded main page with bestsellers
+2026-01-19 22:07:40,754 - INFO - Loaded main page with bestsellers
+2026-01-19 22:07:45,812 - INFO - Loaded main page with bestsellers
+2026-01-19 22:08:09,338 - INFO - Loaded main page with bestsellers
+2026-01-19 22:09:10,044 - INFO - Loaded main page with bestsellers
+2026-01-19 22:09:10,541 - INFO - Loaded main page with bestsellers
+2026-01-19 22:09:19,112 - INFO - Loaded main page with bestsellers
+2026-01-19 22:09:26,244 - INFO - Loaded main page with bestsellers
+2026-01-19 22:10:12,414 - INFO - Loaded main page with bestsellers
+2026-01-19 22:10:27,799 - INFO - Loaded main page with bestsellers
+2026-01-19 22:10:50,630 - INFO - Loaded main page with bestsellers
+2026-01-19 22:10:50,987 - INFO - Loaded main page with bestsellers
+2026-01-19 22:10:51,127 - INFO - Loaded main page with bestsellers
+2026-01-19 22:11:52,546 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-19 22:13:44,748 - INFO - Loaded main page with bestsellers
+2026-01-19 22:14:46,101 - INFO - Loaded main page with bestsellers
+2026-01-19 22:14:53,813 - INFO - Loaded main page with bestsellers
+2026-01-19 22:16:53,693 - INFO - Loaded main page with bestsellers
+2026-01-19 22:19:47,303 - INFO - Loaded main page with bestsellers
+2026-01-19 22:20:05,551 - INFO - Loaded main page with bestsellers
+2026-01-19 22:20:05,950 - INFO - Loaded main page with bestsellers
+2026-01-19 22:20:06,134 - INFO - Loaded main page with bestsellers
+2026-01-19 22:20:06,266 - INFO - Loaded main page with bestsellers
+2026-01-19 22:20:40,341 - INFO - Loaded main page with bestsellers
+2026-01-19 22:21:02,583 - INFO - Loaded main page with bestsellers
+2026-01-19 22:21:17,271 - INFO - Loaded main page with bestsellers
+2026-01-19 22:21:29,388 - INFO - Loaded main page with bestsellers
+2026-01-19 22:21:38,024 - INFO - Loaded main page with bestsellers
+2026-01-19 22:21:38,258 - INFO - Loaded main page with bestsellers
+2026-01-19 22:22:29,663 - INFO - Loaded main page with bestsellers
+2026-01-19 22:22:29,689 - WARNING - Page not found: /static/kuno2.png
+2026-01-19 22:22:55,417 - INFO - Loaded main page with bestsellers
+2026-01-19 22:24:00,839 - INFO - Loaded main page with bestsellers
+2026-01-19 22:26:18,976 - INFO - Loaded main page with bestsellers
+2026-01-19 22:28:02,215 - INFO - Loaded main page with bestsellers
+2026-01-19 22:28:02,690 - INFO - Loaded main page with bestsellers
+2026-01-19 22:32:44,099 - INFO - Loaded main page with bestsellers
+2026-01-19 22:34:24,293 - INFO - User logged out: Администратор
+2026-01-19 22:34:24,297 - INFO - Loaded main page with bestsellers
+2026-01-19 22:36:09,337 - INFO - Loaded main page with bestsellers
+2026-01-19 22:36:15,886 - INFO - Loaded main page with bestsellers
+2026-01-19 22:36:23,538 - INFO - Loaded main page with bestsellers
+2026-01-19 22:36:34,045 - INFO - Loaded main page with bestsellers
+2026-01-19 22:36:55,690 - INFO - User logged in: admin@example.com
+2026-01-19 22:36:55,694 - INFO - Loaded main page with bestsellers
+2026-01-19 22:37:21,779 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-19 22:38:27,019 - INFO - Loaded main page with bestsellers
+2026-01-19 22:39:21,930 - INFO - Loaded main page with bestsellers
+2026-01-19 22:40:49,550 - INFO - Loaded main page with bestsellers
+2026-01-19 22:42:30,221 - INFO - Database initialized successfully
+2026-01-19 22:42:30,435 - INFO - Database initialized successfully
+2026-01-19 22:42:32,199 - INFO - Loaded main page with bestsellers
+2026-01-19 22:43:03,681 - INFO - User logged out: Администратор
+2026-01-19 22:43:03,685 - INFO - Loaded main page with bestsellers
+2026-01-19 22:43:05,028 - INFO - Loaded main page with bestsellers
+2026-01-19 22:43:17,281 - INFO - Loaded main page with bestsellers
+2026-01-19 22:43:24,860 - INFO - Loaded main page with bestsellers
+2026-01-19 22:44:36,283 - INFO - Loaded main page with bestsellers
+2026-01-19 22:44:43,391 - INFO - User logged in: admin@example.com
+2026-01-19 22:44:43,395 - INFO - Loaded main page with bestsellers
+2026-01-19 22:45:04,934 - INFO - Loaded main page with bestsellers
+2026-01-19 22:49:09,435 - INFO - Loaded main page with bestsellers
+2026-01-19 22:49:12,156 - INFO - User logged out: Администратор
+2026-01-19 22:49:12,159 - INFO - Loaded main page with bestsellers
+2026-01-19 22:49:17,011 - INFO - User logged in: moder@example.com
+2026-01-19 22:49:17,015 - INFO - Loaded main page with bestsellers
+2026-01-19 22:49:18,380 - INFO - Loaded main page with bestsellers
+2026-01-19 22:49:19,871 - INFO - User logged out: Тестовый модератор
+2026-01-19 22:49:19,875 - INFO - Loaded main page with bestsellers
+2026-01-19 22:51:24,980 - INFO - Loaded main page with bestsellers
+2026-01-19 22:51:28,865 - INFO - Loaded main page with bestsellers
+2026-01-19 22:51:34,959 - INFO - User logged in: admin@example.com
+2026-01-19 22:51:34,963 - INFO - Loaded main page with bestsellers
+2026-01-19 22:51:39,293 - INFO - User 1 viewed cart with 0 items
+2026-01-19 22:51:44,558 - INFO - Loaded main page with bestsellers
+2026-01-19 22:51:46,593 - INFO - User logged out: Администратор
+2026-01-19 22:51:46,598 - INFO - Loaded main page with bestsellers
+2026-01-21 19:09:05,599 - INFO - Database initialized successfully
+2026-01-21 19:09:05,797 - INFO - Database initialized successfully
+2026-01-21 19:09:08,309 - INFO - Loaded main page with bestsellers
+2026-01-21 19:09:32,900 - INFO - User logged in: user@example.com
+2026-01-21 19:09:32,904 - INFO - Loaded main page with bestsellers
+2026-01-21 19:09:46,297 - INFO - User logged out: Тестовый пользователь
+2026-01-21 19:09:46,301 - INFO - Loaded main page with bestsellers
+2026-01-21 19:09:53,196 - INFO - User logged in: admin@example.com
+2026-01-21 19:09:53,199 - INFO - Loaded main page with bestsellers
+2026-01-21 19:10:45,306 - INFO - User 1 viewed cart with 0 items
+2026-01-21 19:10:46,459 - INFO - User 1 viewed cart with 0 items
+2026-01-21 19:10:48,480 - INFO - User 1 viewed cart with 0 items
+2026-01-21 19:10:51,105 - INFO - User 1 viewed cart with 0 items
+2026-01-21 19:10:52,194 - INFO - User 1 viewed cart with 0 items
+2026-01-21 19:10:53,679 - INFO - User 1 viewed cart with 0 items
+2026-01-21 19:10:55,420 - INFO - User 1 viewed cart with 0 items
+2026-01-21 19:17:58,868 - INFO - Loaded main page with bestsellers
+2026-01-21 19:19:14,236 - INFO - User logged out: Администратор
+2026-01-21 19:19:14,240 - INFO - Loaded main page with bestsellers
+2026-01-21 19:19:20,060 - INFO - Loaded main page with bestsellers
+2026-01-21 19:20:53,147 - INFO - Loaded main page with bestsellers
+2026-01-21 19:22:06,695 - INFO - Loaded main page with bestsellers
+2026-01-21 19:31:27,374 - INFO - Loaded main page with bestsellers
+2026-01-21 19:34:38,561 - INFO - Loaded main page with bestsellers
+2026-01-21 19:34:38,605 - WARNING - Page not found: /static/{{ url_for('static', filename='buildings1.png') }}
+2026-01-21 19:34:38,829 - INFO - Loaded main page with bestsellers
+2026-01-21 19:34:39,865 - INFO - Loaded main page with bestsellers
+2026-01-21 19:34:55,313 - INFO - Loaded main page with bestsellers
+2026-01-21 19:34:55,347 - WARNING - Page not found: /static/{{ url_for('static', filename='buildings1.png') }}
+2026-01-21 19:34:55,634 - INFO - Loaded main page with bestsellers
+2026-01-21 19:36:09,183 - INFO - Loaded main page with bestsellers
+2026-01-21 19:36:09,625 - INFO - Loaded main page with bestsellers
+2026-01-21 19:36:09,796 - INFO - Loaded main page with bestsellers
+2026-01-21 19:36:50,010 - INFO - Loaded main page with bestsellers
+2026-01-21 19:37:04,247 - INFO - Loaded main page with bestsellers
+2026-01-21 19:38:49,620 - INFO - Loaded main page with bestsellers
+2026-01-21 19:38:50,070 - INFO - Loaded main page with bestsellers
+2026-01-21 19:38:50,267 - INFO - Loaded main page with bestsellers
+2026-01-21 19:38:50,442 - INFO - Loaded main page with bestsellers
+2026-01-21 19:38:50,588 - INFO - Loaded main page with bestsellers
+2026-01-21 19:41:10,357 - INFO - Loaded main page with bestsellers
+2026-01-21 19:41:10,387 - WARNING - Page not found: /static/{{ url_for('static', filename='buildings1.png') }}
+2026-01-21 19:41:10,814 - INFO - Loaded main page with bestsellers
+2026-01-21 19:43:17,718 - INFO - Loaded main page with bestsellers
+2026-01-21 19:43:18,157 - INFO - Loaded main page with bestsellers
+2026-01-21 19:44:16,581 - INFO - Loaded main page with bestsellers
+2026-01-21 19:44:16,616 - WARNING - Page not found: /static/{{ url_for('static', filename='buildings1.png') }}
+2026-01-21 19:44:17,365 - INFO - Loaded main page with bestsellers
+2026-01-21 19:44:17,537 - INFO - Loaded main page with bestsellers
+2026-01-21 19:45:02,907 - INFO - Loaded main page with bestsellers
+2026-01-21 19:45:03,275 - INFO - Loaded main page with bestsellers
+2026-01-21 19:47:06,137 - INFO - Loaded main page with bestsellers
+2026-01-21 19:47:20,860 - INFO - Loaded main page with bestsellers
+2026-01-21 19:47:41,324 - INFO - Loaded main page with bestsellers
+2026-01-21 19:48:06,980 - INFO - Loaded main page with bestsellers
+2026-01-21 19:48:07,016 - WARNING - Page not found: /static/{{ url_for('static', filename='buildings1.png') }}
+2026-01-21 19:50:24,064 - INFO - Loaded main page with bestsellers
+2026-01-21 19:50:24,099 - WARNING - Page not found: /static/{{ url_for('static', filename='buildings1.png') }}
+2026-01-21 19:53:36,187 - INFO - Loaded main page with bestsellers
+2026-01-21 19:53:36,225 - WARNING - Page not found: /static/{{ url_for('static', filename='buildings1.png') }}
+2026-01-21 19:54:40,856 - INFO - Loaded main page with bestsellers
+2026-01-21 19:54:40,899 - WARNING - Page not found: /static/{{ url_for('static', filename='buildings1.png') }}
+2026-01-21 19:55:05,667 - INFO - Loaded main page with bestsellers
+2026-01-21 19:55:14,627 - INFO - Loaded main page with bestsellers
+2026-01-21 19:56:37,449 - INFO - Loaded main page with bestsellers
+2026-01-21 20:01:56,112 - INFO - Loaded main page with bestsellers
+2026-01-21 20:01:56,156 - WARNING - Page not found: /static/{{ url_for('static', filename='buildings1.png') }}
+2026-01-21 20:02:15,114 - INFO - Loaded main page with bestsellers
+2026-01-21 20:02:15,557 - INFO - Loaded main page with bestsellers
+2026-01-21 20:02:24,954 - INFO - Loaded main page with bestsellers
+2026-01-21 20:02:36,648 - INFO - Loaded main page with bestsellers
+2026-01-21 20:21:24,834 - INFO - Loaded main page with bestsellers
+2026-01-21 20:22:55,794 - INFO - Loaded main page with bestsellers
+2026-01-21 20:24:43,952 - INFO - Loaded main page with bestsellers
+2026-01-21 20:25:44,456 - INFO - Loaded main page with bestsellers
+2026-01-21 20:27:51,910 - INFO - Loaded main page with bestsellers
+2026-01-21 20:29:04,059 - INFO - Loaded main page with bestsellers
+2026-01-21 20:29:05,393 - INFO - Loaded main page with bestsellers
+2026-01-21 20:29:12,030 - INFO - Loaded main page with bestsellers
+2026-01-21 20:29:25,651 - INFO - Loaded main page with bestsellers
+2026-01-21 20:30:46,615 - INFO - Loaded main page with bestsellers
+2026-01-21 20:30:56,196 - INFO - Loaded main page with bestsellers
+2026-01-21 20:31:31,668 - INFO - Loaded main page with bestsellers
+2026-01-21 20:31:40,001 - INFO - Loaded main page with bestsellers
+2026-01-21 20:31:49,855 - INFO - Loaded main page with bestsellers
+2026-01-21 20:32:00,791 - INFO - Loaded main page with bestsellers
+2026-01-21 20:32:09,179 - INFO - Loaded main page with bestsellers
+2026-01-21 20:32:17,278 - INFO - Loaded main page with bestsellers
+2026-01-21 20:32:40,499 - INFO - Loaded main page with bestsellers
+2026-01-21 20:32:41,229 - INFO - Loaded main page with bestsellers
+2026-01-21 20:32:41,459 - INFO - Loaded main page with bestsellers
+2026-01-21 20:32:41,626 - INFO - Loaded main page with bestsellers
+2026-01-21 20:32:55,347 - INFO - Loaded main page with bestsellers
+2026-01-21 20:32:55,797 - INFO - Loaded main page with bestsellers
+2026-01-21 20:33:02,767 - INFO - Loaded main page with bestsellers
+2026-01-21 20:33:03,451 - INFO - Loaded main page with bestsellers
+2026-01-21 20:33:15,624 - INFO - Loaded main page with bestsellers
+2026-01-21 20:34:29,436 - INFO - Loaded main page with bestsellers
+2026-01-21 20:35:12,452 - INFO - Loaded main page with bestsellers
+2026-01-21 20:35:33,600 - INFO - Loaded main page with bestsellers
+2026-01-21 20:35:42,218 - INFO - Loaded main page with bestsellers
+2026-01-21 20:36:41,304 - INFO - Loaded main page with bestsellers
+2026-01-21 20:36:41,807 - INFO - Loaded main page with bestsellers
+2026-01-21 20:36:42,005 - INFO - Loaded main page with bestsellers
+2026-01-21 20:36:51,835 - INFO - Loaded main page with bestsellers
+2026-01-21 20:36:52,280 - INFO - Loaded main page with bestsellers
+2026-01-21 20:36:52,432 - INFO - Loaded main page with bestsellers
+2026-01-21 20:37:09,363 - INFO - Loaded main page with bestsellers
+2026-01-21 20:37:09,635 - INFO - Loaded main page with bestsellers
+2026-01-21 20:37:10,119 - INFO - Loaded main page with bestsellers
+2026-01-21 20:37:10,273 - INFO - Loaded main page with bestsellers
+2026-01-21 20:37:16,875 - INFO - Loaded main page with bestsellers
+2026-01-21 20:37:17,291 - INFO - Loaded main page with bestsellers
+2026-01-21 20:37:17,452 - INFO - Loaded main page with bestsellers
+2026-01-21 20:37:30,095 - INFO - Loaded main page with bestsellers
+2026-01-21 20:37:37,739 - INFO - Loaded main page with bestsellers
+2026-01-21 20:37:53,248 - INFO - Loaded main page with bestsellers
+2026-01-21 20:38:09,614 - INFO - Loaded main page with bestsellers
+2026-01-21 20:39:25,259 - INFO - Loaded main page with bestsellers
+2026-01-21 20:39:34,712 - INFO - Loaded main page with bestsellers
+2026-01-21 20:39:43,675 - INFO - Loaded main page with bestsellers
+2026-01-21 20:40:35,686 - INFO - Loaded main page with bestsellers
+2026-01-21 20:40:46,732 - INFO - Loaded main page with bestsellers
+2026-01-21 20:40:53,947 - INFO - Loaded main page with bestsellers
+2026-01-21 20:41:08,090 - INFO - Loaded main page with bestsellers
+2026-01-21 20:41:23,709 - INFO - Loaded main page with bestsellers
+2026-01-21 20:42:09,211 - INFO - Loaded main page with bestsellers
+2026-01-21 20:42:20,666 - INFO - Loaded main page with bestsellers
+2026-01-21 20:42:26,219 - INFO - Loaded main page with bestsellers
+2026-01-21 20:43:49,503 - INFO - Loaded main page with bestsellers
+2026-01-21 20:44:06,955 - INFO - Loaded main page with bestsellers
+2026-01-21 20:44:37,277 - INFO - Loaded main page with bestsellers
+2026-01-21 20:45:46,915 - INFO - Loaded main page with bestsellers
+2026-01-21 20:45:55,232 - INFO - Loaded main page with bestsellers
+2026-01-21 20:45:57,788 - INFO - Loaded main page with bestsellers
+2026-01-21 20:45:58,260 - INFO - Loaded main page with bestsellers
+2026-01-21 20:46:14,282 - INFO - Loaded main page with bestsellers
+2026-01-21 20:46:20,487 - INFO - Loaded main page with bestsellers
+2026-01-21 20:46:20,909 - INFO - Loaded main page with bestsellers
+2026-01-21 20:46:21,089 - INFO - Loaded main page with bestsellers
+2026-01-21 20:46:41,827 - INFO - Loaded main page with bestsellers
+2026-01-21 20:46:42,229 - INFO - Loaded main page with bestsellers
+2026-01-21 20:46:42,393 - INFO - Loaded main page with bestsellers
+2026-01-21 20:46:54,146 - INFO - Loaded main page with bestsellers
+2026-01-21 20:47:34,572 - INFO - Loaded main page with bestsellers
+2026-01-21 20:48:02,620 - INFO - Loaded main page with bestsellers
+2026-01-21 20:48:11,512 - INFO - Loaded main page with bestsellers
+2026-01-21 20:48:20,494 - INFO - Loaded main page with bestsellers
+2026-01-21 20:49:14,966 - INFO - Loaded main page with bestsellers
+2026-01-21 20:49:29,413 - INFO - Loaded main page with bestsellers
+2026-01-21 20:49:40,504 - INFO - Loaded main page with bestsellers
+2026-01-21 20:49:43,697 - INFO - Loaded main page with bestsellers
+2026-01-21 20:49:43,876 - INFO - Loaded main page with bestsellers
+2026-01-21 20:49:44,009 - INFO - Loaded main page with bestsellers
+2026-01-21 20:49:50,422 - INFO - Loaded main page with bestsellers
+2026-01-21 20:50:01,409 - INFO - Loaded main page with bestsellers
+2026-01-21 20:50:01,800 - INFO - Loaded main page with bestsellers
+2026-01-21 20:52:28,325 - INFO - Loaded main page with bestsellers
+2026-01-21 20:52:37,197 - INFO - Loaded main page with bestsellers
+2026-01-21 20:53:06,532 - INFO - Loaded main page with bestsellers
+2026-01-21 20:53:07,574 - INFO - Loaded main page with bestsellers
+2026-01-21 20:53:15,343 - INFO - Loaded main page with bestsellers
+2026-01-21 20:53:21,519 - INFO - Loaded main page with bestsellers
+2026-01-21 20:53:22,034 - INFO - Loaded main page with bestsellers
+2026-01-21 20:53:28,171 - INFO - Loaded main page with bestsellers
+2026-01-21 20:55:20,662 - INFO - Loaded main page with bestsellers
+2026-01-21 20:55:22,464 - INFO - Loaded main page with bestsellers
+2026-01-21 20:56:10,597 - INFO - Loaded main page with bestsellers
+2026-01-21 20:56:29,437 - INFO - Loaded main page with bestsellers
+2026-01-21 21:00:08,903 - INFO - Loaded main page with bestsellers
+2026-01-21 21:02:12,919 - INFO - Loaded main page with bestsellers
+2026-01-21 21:02:45,058 - INFO - Loaded main page with bestsellers
+2026-01-21 21:03:44,130 - INFO - Loaded main page with bestsellers
+2026-01-21 21:06:06,566 - INFO - Loaded main page with bestsellers
+2026-01-21 21:06:25,504 - INFO - Loaded main page with bestsellers
+2026-01-21 21:06:37,315 - INFO - Loaded main page with bestsellers
+2026-01-21 21:06:48,577 - INFO - Loaded main page with bestsellers
+2026-01-21 21:07:27,563 - INFO - Loaded main page with bestsellers
+2026-01-21 21:07:37,900 - INFO - Loaded main page with bestsellers
+2026-01-21 21:07:42,955 - INFO - Loaded main page with bestsellers
+2026-01-21 21:08:11,518 - INFO - Loaded main page with bestsellers
+2026-01-21 21:08:17,368 - INFO - Loaded main page with bestsellers
+2026-01-21 21:09:19,784 - INFO - Loaded main page with bestsellers
+2026-01-21 21:09:20,566 - INFO - Loaded main page with bestsellers
+2026-01-21 21:09:20,707 - INFO - Loaded main page with bestsellers
+2026-01-21 21:09:44,878 - INFO - Loaded main page with bestsellers
+2026-01-21 21:09:45,460 - INFO - Loaded main page with bestsellers
+2026-01-21 21:09:45,603 - INFO - Loaded main page with bestsellers
+2026-01-21 21:09:59,130 - INFO - Loaded main page with bestsellers
+2026-01-21 21:10:11,963 - INFO - Loaded main page with bestsellers
+2026-01-21 21:12:38,625 - INFO - Loaded main page with bestsellers
+2026-01-21 21:13:07,923 - INFO - Loaded main page with bestsellers
+2026-01-21 21:14:05,301 - INFO - Loaded main page with bestsellers
+2026-01-21 21:14:11,909 - INFO - Loaded main page with bestsellers
+2026-01-21 21:15:13,094 - INFO - Loaded main page with bestsellers
+2026-01-21 21:15:58,797 - INFO - Loaded main page with bestsellers
+2026-01-21 21:16:12,902 - INFO - Loaded main page with bestsellers
+2026-01-21 21:16:13,721 - INFO - Loaded main page with bestsellers
+2026-01-21 21:16:13,919 - INFO - Loaded main page with bestsellers
+2026-01-21 21:16:24,021 - INFO - Loaded main page with bestsellers
+2026-01-21 21:16:28,488 - INFO - Loaded main page with bestsellers
+2026-01-21 21:16:46,850 - INFO - Loaded main page with bestsellers
+2026-01-21 21:16:59,217 - INFO - Loaded main page with bestsellers
+2026-01-21 21:16:59,773 - INFO - Loaded main page with bestsellers
+2026-01-21 21:17:09,949 - INFO - Loaded main page with bestsellers
+2026-01-21 21:17:25,557 - INFO - Loaded main page with bestsellers
+2026-01-21 21:17:30,357 - INFO - Loaded main page with bestsellers
+2026-01-21 21:17:56,000 - INFO - Loaded main page with bestsellers
+2026-01-21 21:18:52,104 - INFO - Loaded main page with bestsellers
+2026-01-21 21:18:52,601 - INFO - Loaded main page with bestsellers
+2026-01-21 21:18:52,748 - INFO - Loaded main page with bestsellers
+2026-01-21 21:18:58,992 - INFO - Loaded main page with bestsellers
+2026-01-21 21:19:05,904 - INFO - Loaded main page with bestsellers
+2026-01-21 21:19:06,295 - INFO - Loaded main page with bestsellers
+2026-01-21 21:19:15,976 - INFO - Loaded main page with bestsellers
+2026-01-21 21:19:23,457 - INFO - Loaded main page with bestsellers
+2026-01-21 21:19:55,054 - INFO - Loaded main page with bestsellers
+2026-01-21 21:19:55,475 - INFO - Loaded main page with bestsellers
+2026-01-21 21:20:01,652 - INFO - Loaded main page with bestsellers
+2026-01-21 21:20:13,541 - INFO - Loaded main page with bestsellers
+2026-01-21 21:20:25,672 - INFO - Loaded main page with bestsellers
+2026-01-21 21:21:12,394 - INFO - Loaded main page with bestsellers
+2026-01-21 21:26:00,216 - INFO - Loaded main page with bestsellers
+2026-01-21 21:27:12,937 - INFO - Loaded main page with bestsellers
+2026-01-21 21:32:11,357 - INFO - Loaded main page with bestsellers
+2026-01-21 21:33:04,305 - INFO - Loaded main page with bestsellers
+2026-01-21 21:33:09,378 - INFO - Loaded main page with bestsellers
+2026-01-21 21:34:34,063 - INFO - Loaded main page with bestsellers
+2026-01-21 21:34:55,028 - INFO - Loaded main page with bestsellers
+2026-01-21 21:35:20,397 - INFO - Loaded main page with bestsellers
+2026-01-21 21:36:19,501 - INFO - Loaded main page with bestsellers
+2026-01-21 21:36:30,658 - INFO - Loaded main page with bestsellers
+2026-01-21 21:36:33,286 - INFO - Loaded main page with bestsellers
+2026-01-21 21:37:27,819 - INFO - Loaded main page with bestsellers
+2026-01-21 21:38:36,901 - INFO - Loaded main page with bestsellers
+2026-01-21 21:39:14,538 - INFO - Loaded main page with bestsellers
+2026-01-21 21:40:36,259 - INFO - Loaded main page with bestsellers
+2026-01-21 21:41:02,776 - INFO - Loaded main page with bestsellers
+2026-01-21 21:47:15,945 - INFO - Loaded main page with bestsellers
+2026-01-21 21:47:48,778 - INFO - Loaded main page with bestsellers
+2026-01-21 21:48:40,317 - INFO - Loaded main page with bestsellers
+2026-01-21 21:49:14,238 - INFO - Loaded main page with bestsellers
+2026-01-21 21:49:34,614 - INFO - Loaded main page with bestsellers
+2026-01-21 21:49:35,512 - INFO - Loaded main page with bestsellers
+2026-01-21 21:49:35,784 - INFO - Loaded main page with bestsellers
+2026-01-21 21:49:35,978 - INFO - Loaded main page with bestsellers
+2026-01-21 21:49:36,162 - INFO - Loaded main page with bestsellers
+2026-01-21 21:49:36,347 - INFO - Loaded main page with bestsellers
+2026-01-21 21:49:36,513 - INFO - Loaded main page with bestsellers
+2026-01-21 21:49:36,733 - INFO - Loaded main page with bestsellers
+2026-01-21 21:49:37,093 - INFO - Loaded main page with bestsellers
+2026-01-21 21:49:46,449 - INFO - Loaded main page with bestsellers
+2026-01-21 21:49:47,386 - INFO - Loaded main page with bestsellers
+2026-01-21 21:50:51,983 - INFO - Loaded main page with bestsellers
+2026-01-21 21:50:52,782 - INFO - Loaded main page with bestsellers
+2026-01-21 21:50:52,947 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:20,020 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:21,129 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:21,320 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:21,497 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:21,679 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:21,832 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:21,998 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:22,166 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:22,331 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:22,469 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:22,603 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:30,096 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:30,486 - INFO - Loaded main page with bestsellers
+2026-01-21 21:51:54,770 - INFO - Loaded main page with bestsellers
+2026-01-21 21:52:31,286 - INFO - Loaded main page with bestsellers
+2026-01-21 21:52:46,394 - INFO - Loaded main page with bestsellers
+2026-01-21 21:52:49,148 - INFO - Loaded main page with bestsellers
+2026-01-21 21:52:56,862 - INFO - Loaded main page with bestsellers
+2026-01-21 21:53:41,959 - INFO - Loaded main page with bestsellers
+2026-01-21 21:54:32,301 - INFO - Loaded main page with bestsellers
+2026-01-21 21:58:38,658 - INFO - Loaded main page with bestsellers
+2026-01-21 21:58:55,597 - INFO - Loaded main page with bestsellers
+2026-01-21 21:59:08,832 - INFO - Loaded main page with bestsellers
+2026-01-21 21:59:13,275 - INFO - Loaded main page with bestsellers
+2026-01-21 21:59:40,214 - INFO - Loaded main page with bestsellers
+2026-01-21 21:59:57,430 - INFO - Loaded main page with bestsellers
+2026-01-21 22:00:05,796 - INFO - Loaded main page with bestsellers
+2026-01-21 22:01:53,380 - INFO - Loaded main page with bestsellers
+2026-01-21 22:01:53,799 - INFO - Loaded main page with bestsellers
+2026-01-21 22:03:15,834 - INFO - Loaded main page with bestsellers
+2026-01-21 22:04:14,423 - INFO - Loaded main page with bestsellers
+2026-01-21 22:05:13,706 - INFO - Loaded main page with bestsellers
+2026-01-21 22:05:25,500 - INFO - Loaded main page with bestsellers
+2026-01-21 22:05:37,217 - INFO - Loaded main page with bestsellers
+2026-01-21 22:06:22,749 - INFO - Loaded main page with bestsellers
+2026-01-21 22:07:04,485 - INFO - Loaded main page with bestsellers
+2026-01-21 22:07:21,599 - INFO - Loaded main page with bestsellers
+2026-01-21 22:07:22,324 - INFO - Loaded main page with bestsellers
+2026-01-21 22:07:22,502 - INFO - Loaded main page with bestsellers
+2026-01-21 22:07:22,670 - INFO - Loaded main page with bestsellers
+2026-01-21 22:07:37,406 - INFO - Loaded main page with bestsellers
+2026-01-21 22:07:40,010 - INFO - Loaded main page with bestsellers
+2026-01-21 22:07:40,477 - INFO - Loaded main page with bestsellers
+2026-01-21 22:08:30,591 - INFO - Loaded main page with bestsellers
+2026-01-21 22:08:46,398 - INFO - Loaded main page with bestsellers
+2026-01-21 22:08:46,789 - INFO - Loaded main page with bestsellers
+2026-01-21 22:10:37,126 - INFO - Loaded main page with bestsellers
+2026-01-21 22:10:37,514 - INFO - Loaded main page with bestsellers
+2026-01-21 22:11:45,604 - INFO - Loaded main page with bestsellers
+2026-01-21 22:11:47,480 - INFO - Loaded main page with bestsellers
+2026-01-21 22:12:35,212 - INFO - Loaded main page with bestsellers
+2026-01-21 22:12:50,376 - INFO - Loaded main page with bestsellers
+2026-01-21 22:12:57,503 - INFO - Loaded main page with bestsellers
+2026-01-21 22:14:00,299 - INFO - Loaded main page with bestsellers
+2026-01-21 22:14:01,112 - INFO - Loaded main page with bestsellers
+2026-01-21 22:14:01,309 - INFO - Loaded main page with bestsellers
+2026-01-21 22:14:45,001 - INFO - Loaded main page with bestsellers
+2026-01-21 22:16:44,628 - INFO - Loaded main page with bestsellers
+2026-01-21 22:18:27,657 - INFO - Loaded main page with bestsellers
+2026-01-21 22:21:20,438 - INFO - Loaded main page with bestsellers
+2026-01-21 22:24:13,161 - INFO - Loaded main page with bestsellers
+2026-01-21 22:24:33,392 - INFO - User logged in: admin@example.com
+2026-01-21 22:24:33,396 - INFO - Loaded main page with bestsellers
+2026-01-21 22:24:40,916 - INFO - User 1 viewed cart with 0 items
+2026-01-21 22:25:08,964 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-21 22:25:12,805 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-21 22:25:36,199 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-21 22:25:36,568 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-21 22:25:36,710 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-21 22:26:41,601 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-21 22:28:01,954 - INFO - Database initialized successfully
+2026-01-21 22:35:41,536 - INFO - Database initialized successfully
+2026-01-21 22:35:41,746 - INFO - Database initialized successfully
+2026-01-21 22:36:19,106 - INFO - Database initialized successfully
+2026-01-21 22:39:17,121 - INFO - Database initialized successfully
+2026-01-21 22:39:34,124 - INFO - Database initialized successfully
+2026-01-21 22:39:34,348 - INFO - Database initialized successfully
+2026-01-21 22:39:36,485 - INFO - Loaded main page with bestsellers
+2026-01-21 22:46:02,716 - INFO - Database initialized successfully
+2026-01-21 22:47:05,548 - INFO - Loaded main page with bestsellers
+2026-01-21 22:47:07,213 - INFO - Loaded main page with bestsellers
+2026-01-21 22:49:10,466 - INFO - Database initialized successfully
+2026-01-21 22:50:11,128 - INFO - Loaded main page with bestsellers
+2026-01-21 22:50:22,348 - INFO - Loaded main page with bestsellers
+2026-01-21 22:50:33,221 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-21 22:50:34,597 - INFO - Loaded main page with bestsellers
+2026-01-21 22:50:35,771 - INFO - Loaded main page with bestsellers
+2026-01-21 22:53:16,267 - INFO - Database initialized successfully
+2026-01-21 22:53:38,525 - WARNING - Page not found: /admin_panel
+2026-01-21 22:53:39,564 - WARNING - Page not found: /admin_panel
+2026-01-21 22:53:57,654 - INFO - Database initialized successfully
+2026-01-21 22:55:19,107 - INFO - Database initialized successfully
+2026-01-21 22:58:39,739 - INFO - Database initialized successfully
+2026-01-21 23:02:28,621 - INFO - Database initialized successfully
+2026-01-21 23:05:23,532 - INFO - Database initialized successfully
+2026-01-21 23:05:24,804 - INFO - Database initialized successfully
+2026-01-21 23:05:33,219 - INFO - Database initialized successfully
+2026-01-21 23:05:33,435 - INFO - Database initialized successfully
+2026-01-21 23:07:29,028 - INFO - Database initialized successfully
+2026-01-21 23:07:38,881 - INFO - Database initialized successfully
+2026-01-21 23:07:39,072 - INFO - Database initialized successfully
+2026-01-21 23:08:55,590 - INFO - Database initialized successfully
+2026-01-21 23:08:58,099 - INFO - Loaded main page with bestsellers
+2026-01-21 23:09:13,597 - INFO - Database initialized successfully
+2026-01-21 23:09:13,814 - INFO - Database initialized successfully
+2026-01-21 23:09:14,953 - INFO - Loaded main page with bestsellers
+2026-01-21 23:11:11,379 - INFO - Database initialized successfully
+2026-01-21 23:11:17,412 - INFO - Category 9 updated
+2026-01-21 23:11:23,582 - INFO - Category added: thftgh with ID: 11
+2026-01-21 23:11:38,367 - INFO - Category 11 deleted
+2026-01-21 23:15:36,307 - INFO - Loaded main page with bestsellers
+2026-01-21 23:15:47,571 - INFO - Loaded main page with bestsellers
+2026-01-21 23:15:56,626 - INFO - New application #39 from 1234@1234
+2026-01-21 23:15:56,629 - INFO - Loaded main page with bestsellers
+2026-01-22 02:17:52,106 - INFO - Database initialized successfully
+2026-01-22 02:17:52,346 - INFO - Database initialized successfully
+2026-01-22 02:17:56,717 - INFO - Loaded main page with bestsellers
+2026-01-22 02:19:46,127 - INFO - User logged in: admin@example.com
+2026-01-22 02:19:46,137 - INFO - Loaded main page with bestsellers
+2026-01-22 02:20:34,867 - WARNING - Page not found: /favicon.ico
+2026-01-22 02:27:49,907 - INFO - Database initialized successfully
+2026-01-22 02:27:55,357 - INFO - Database initialized successfully
+2026-01-22 02:28:04,916 - INFO - Database initialized successfully
+2026-01-22 02:28:13,447 - INFO - Database initialized successfully
+2026-01-22 02:28:19,916 - INFO - Database initialized successfully
+2026-01-22 02:28:40,806 - INFO - Database initialized successfully
+2026-01-22 02:29:55,147 - INFO - Database initialized successfully
+2026-01-22 02:29:55,347 - INFO - Database initialized successfully
+2026-01-22 02:30:04,777 - WARNING - Page not found: /manage_software/static/logo.png
+2026-01-22 02:30:10,896 - INFO - Software added: 123 with ID: 13
+2026-01-22 02:30:40,927 - INFO - Database initialized successfully
+2026-01-22 02:32:15,857 - INFO - Database initialized successfully
+2026-01-22 02:32:25,407 - INFO - Database initialized successfully
+2026-01-22 02:33:14,036 - INFO - Database initialized successfully
+2026-01-22 02:36:28,707 - INFO - Database initialized successfully
+2026-01-22 02:36:32,067 - INFO - Database initialized successfully
+2026-01-22 02:39:00,729 - WARNING - Page not found: /manage_room
+2026-01-22 02:43:47,677 - INFO - Database initialized successfully
+2026-01-22 02:49:35,857 - WARNING - Page not found: /manage_software/13/static/logo.png
+2026-01-22 02:49:37,952 - WARNING - Page not found: /favicon.ico
+2026-01-22 02:50:46,902 - INFO - Database initialized successfully
+2026-01-22 02:50:51,307 - INFO - Database initialized successfully
+2026-01-22 02:50:52,617 - INFO - Database initialized successfully
+2026-01-22 02:50:54,947 - INFO - Database initialized successfully
+2026-01-22 03:02:22,677 - INFO - Database initialized successfully
+2026-01-22 03:02:56,487 - WARNING - Page not found: /manage_room
+2026-01-22 03:04:53,207 - WARNING - Page not found: /manage_room/1/static/logo.png
+2026-01-22 03:10:02,347 - WARNING - Page not found: /manage_room/1/static/logo.png
+2026-01-22 03:10:57,737 - INFO - Database initialized successfully
+2026-01-22 03:11:59,316 - INFO - Database initialized successfully
+2026-01-22 03:11:59,527 - INFO - Database initialized successfully
+2026-01-22 03:11:59,666 - WARNING - Page not found: /room/None
+2026-01-22 03:12:50,947 - WARNING - Page not found: /room/None
+2026-01-22 03:13:00,156 - WARNING - Page not found: /room/None
+2026-01-22 03:13:00,817 - WARNING - Page not found: /favicon.ico
+2026-01-22 03:13:55,117 - INFO - Database initialized successfully
+2026-01-22 03:14:00,127 - WARNING - Page not found: /favicon.ico
+2026-01-22 03:14:01,637 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:14:25,247 - INFO - Database initialized successfully
+2026-01-22 03:14:33,737 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:15:13,007 - INFO - Loaded main page with bestsellers
+2026-01-22 03:15:21,057 - WARNING - Page not found: /favicon.ico
+2026-01-22 03:15:21,607 - WARNING - Page not found: /manage_room/4/static/logo.png
+2026-01-22 03:15:23,217 - WARNING - Page not found: /manage_room/3/static/logo.png
+2026-01-22 03:15:28,747 - INFO - Loaded main page with bestsellers
+2026-01-22 03:15:32,627 - INFO - Loaded main page with bestsellers
+2026-01-22 03:15:38,237 - WARNING - Page not found: /favicon.ico
+2026-01-22 03:16:09,277 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:16:42,167 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:17:18,697 - INFO - Loaded main page with bestsellers
+2026-01-22 03:17:55,352 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 03:17:58,787 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 03:17:59,369 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 03:18:02,061 - WARNING - Page not found: /favicon.ico
+2026-01-22 03:18:31,727 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 03:18:36,517 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 03:18:37,377 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 03:20:15,976 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 03:20:16,677 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 03:20:21,327 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 03:20:25,687 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 03:20:27,627 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 03:20:30,677 - INFO - User 1 viewed cart with 0 items
+2026-01-22 03:20:49,491 - INFO - Loaded main page with bestsellers
+2026-01-22 03:20:56,322 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 03:27:07,862 - INFO - Database initialized successfully
+2026-01-22 03:27:27,627 - INFO - Database initialized successfully
+2026-01-22 03:27:31,737 - INFO - Database initialized successfully
+2026-01-22 03:27:31,937 - INFO - Database initialized successfully
+2026-01-22 03:27:36,317 - INFO - Loaded main page with bestsellers
+2026-01-22 03:27:38,907 - INFO - Loaded main page with bestsellers
+2026-01-22 03:30:58,017 - INFO - Database initialized successfully
+2026-01-22 03:31:15,132 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:32:45,294 - INFO - Database initialized successfully
+2026-01-22 03:32:45,307 - INFO - Database initialized successfully
+2026-01-22 03:32:59,982 - INFO - Database initialized successfully
+2026-01-22 03:34:16,377 - INFO - Database initialized successfully
+2026-01-22 03:34:16,377 - ERROR - Seeding initial data failed: name 'cursor' is not defined
+2026-01-22 03:34:24,247 - INFO - Database initialized successfully
+2026-01-22 03:34:24,247 - ERROR - Seeding initial data failed: name 'cursor' is not defined
+2026-01-22 03:34:54,877 - INFO - Database initialized successfully
+2026-01-22 03:34:54,887 - ERROR - Seeding initial data failed: name 'cursor' is not defined
+2026-01-22 03:35:08,727 - INFO - Database initialized successfully
+2026-01-22 03:35:08,937 - INFO - Database initialized successfully
+2026-01-22 03:40:15,647 - INFO - Database initialized successfully
+2026-01-22 03:40:15,717 - INFO - Loaded main page with bestsellers
+2026-01-22 03:40:20,022 - INFO - Database initialized successfully
+2026-01-22 03:40:20,227 - INFO - Database initialized successfully
+2026-01-22 03:40:21,647 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:42:06,507 - INFO - Database initialized successfully
+2026-01-22 03:42:07,477 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:42:11,057 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:42:14,377 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:43:00,287 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:43:06,147 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:51:14,295 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:52:09,357 - WARNING - Page not found: /favicon.ico
+2026-01-22 03:52:11,637 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:53:26,337 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:53:41,567 - INFO - Database initialized successfully
+2026-01-22 03:54:03,227 - INFO - Database initialized successfully
+2026-01-22 03:54:03,447 - INFO - Database initialized successfully
+2026-01-22 03:54:04,567 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:54:06,887 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:54:14,172 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:54:15,887 - WARNING - Page not found: /favicon.ico
+2026-01-22 03:55:02,907 - INFO - Database initialized successfully
+2026-01-22 03:55:03,117 - INFO - Database initialized successfully
+2026-01-22 03:56:49,367 - INFO - Database initialized successfully
+2026-01-22 03:56:58,927 - INFO - Database initialized successfully
+2026-01-22 03:57:30,037 - INFO - Database initialized successfully
+2026-01-22 03:57:33,397 - INFO - Database initialized successfully
+2026-01-22 03:57:43,947 - INFO - Database initialized successfully
+2026-01-22 03:58:38,447 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 03:59:08,937 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 04:00:01,257 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 04:00:02,937 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 04:01:46,197 - INFO - Database initialized successfully
+2026-01-22 04:02:27,617 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 04:02:49,897 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 04:03:02,677 - INFO - Database initialized successfully
+2026-01-22 04:04:00,632 - INFO - Database initialized successfully
+2026-01-22 04:04:08,467 - WARNING - Page not found: /manage_room/static/logo.png
+2026-01-22 04:04:22,143 - INFO - Loaded main page with bestsellers
+2026-01-22 04:04:44,607 - WARNING - Page not found: /favicon.ico
+2026-01-22 04:06:54,907 - INFO - Database initialized successfully
+2026-01-22 04:06:57,247 - INFO - Database initialized successfully
+2026-01-22 04:07:05,757 - INFO - Database initialized successfully
+2026-01-22 04:09:12,577 - INFO - Database initialized successfully
+2026-01-22 04:09:21,077 - INFO - Database initialized successfully
+2026-01-22 04:09:26,487 - INFO - Database initialized successfully
+2026-01-22 04:09:38,097 - INFO - Database initialized successfully
+2026-01-22 04:10:17,477 - INFO - Database initialized successfully
+2026-01-22 04:10:18,627 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 04:11:39,207 - INFO - Loaded main page with bestsellers
+2026-01-22 04:11:40,147 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 04:11:43,203 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 04:11:43,587 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 04:11:47,087 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 04:11:50,347 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 04:11:53,959 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 04:12:00,737 - WARNING - Page not found: /static/placeholder-app.png
+2026-01-22 04:12:16,757 - INFO - User 1 viewed cart with 0 items
+2026-01-22 04:12:25,827 - INFO - Loaded main page with bestsellers

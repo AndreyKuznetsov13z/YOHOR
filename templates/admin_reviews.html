@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Отзывы – YOHOR SHOP</title>
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="page-bg"></div>
+    <div class="page-gradient"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <a href="{{ url_for('index') }}" class="logo">
+                    <img src="{{ url_for('static', filename='logo.png') }}" alt="YOHOR SHOP" class="logo-img">
+                </a>
+                <nav class="menu">
+                    <a href="{{ url_for('description') }}" class="pill-link pill-link-primary">О нас</a>
+                    <a href="{{ url_for('catalog') }}" class="pill-link pill-link-primary">Каталог</a>
+                    <a href="{{ url_for('building_materials') }}" class="pill-link pill-link-primary">Стройматериалы</a>
+
+
+                    {% if user_role in ['admin', 'moder'] %}
+
+                    <a href="{{ url_for('admin_tickets', status='active') }}" class="menu-link pill-link">
+                        Тикеты{% if active_tickets_count %} ({{ active_tickets_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('admin_reviews') }}" class="menu-link pill-link">
+                        Отзывы
+                    </a>
+                    <a href="{{ url_for('admin_applications') }}" class="menu-link pill-link">
+                        Заявки{% if active_applications_count %} ({{ active_applications_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('cart') }}" class="menu-link pill-link">
+                        Корзина{% if cart_count %} ({{ cart_count }}){% endif %}
+                    </a>
+                    {% endif %}
+
+                    {% if user_role == 'admin' %}
+                    <a href="{{ url_for('admin_panel') }}" class="menu-link pill-link">
+                        Admin panel
+                    </a>
+                    {% endif %}
+
+                    {% if user_role == 'moder' %}
+                    <a href="{{ url_for('manage_software') }}" class="menu-link pill-link">
+                        Менеджмент товаров
+                    </a>
+                    <a href="{{ url_for('manage_rooms') }}" class="menu-link pill-link">
+                        Менеджмент квартир
+                    </a>
+                    {% endif %}
+
+
+                    {% if user_role in ['admin', 'moder'] %}
+                    <a href="{{ url_for('account') }}" class="pill-link pill-link-primary">Личный кабинет</a>
+                    {% endif %}
+
+
+                    {% if user_role in ['user'] %}
+                    <a href="{{ url_for('support') }}" class="menu-link pill-link">Поддержка</a>
+                    <a href="{{ url_for('cart') }}" class="pill-link pill-link-primary">
+                        Корзина{% if cart_count %} ({{ cart_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('account') }}" class="pill-link pill-link-primary">Личный кабинет</a>
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container" style="max-width: 1120px;">
+                <div class="glass" style="padding: 24px 26px 28px; border-radius: 18px;">
+
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+                        <div>
+                            <h1 style="margin: 0 0 6px; font-size: 22px;">
+                                Отзывы пользователей
+                            </h1>
+                            <p style="margin: 0; font-size: 13px; color: var(--text-muted);">
+                                Последние отзывы на товары и услуги.
+                            </p>
+                        </div>
+                        {% if user_role == 'admin' %}
+                        <a href="{{ url_for('admin_panel') }}" class="btn btn-ghost">
+                            ← Назад в админ-панель
+                        </a>
+                        {% endif %}
+                    </div>
+
+                    {% if reviews %}
+                    <div class="glass" style="border-radius: 14px; overflow: hidden;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+                            <thead>
+                                <tr style="background: rgba(15,23,42,0.95);">
+                                    <th style="text-align: left; padding: 8px 10px;">ID</th>
+                                    <th style="text-align: left; padding: 8px 10px;">Продукт</th>
+                                    <th style="text-align: left; padding: 8px 10px;">Пользователь</th>
+                                    <th style="text-align: left; padding: 8px 10px;">Email</th>
+                                    <th style="text-align: left; padding: 8px 10px;">Оценка</th>
+                                    <th style="text-align: left; padding: 8px 10px;">Отзыв</th>
+                                    <th style="text-align: left; padding: 8px 10px;">Создан</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for r in reviews %}
+                                <tr style="border-top: 1px solid rgba(148,163,184,0.25);">
+                                    <td style="padding: 8px 10px;">{{ r['id'] }}</td>
+                                    <td style="padding: 8px 10px;">
+                                        <a href="{{ url_for('software_detail', software_id=r['software_id']) }}"
+                                            style="color: var(--text-main); text-decoration: none;">
+                                            {{ r['software_name'] }}
+                                        </a>
+                                    </td>
+                                    <td style="padding: 8px 10px;">{{ r['user_name'] }}</td>
+                                    <td style="padding: 8px 10px;">{{ r['user_email'] }}</td>
+                                    <td style="padding: 8px 10px;">{{ r['rating'] }}/5</td>
+                                    <td style="padding: 8px 10px; max-width: 320px;">
+                                        <span
+                                            style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                                            {{ r['review_text'] }}
+                                        </span>
+                                    </td>
+                                    <td style="padding: 8px 10px;">{{ r['created_at'] }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <p style="font-size: 14px; color: var(--text-muted);">
+                        Отзывов пока нет.
+                    </p>
+                    {% endif %}
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <a href="{{ url_for('index') }}" class="logo logo--footer">
+                        <img src="{{ url_for('static', filename='logo.png') }}"  alt="YOHOR SHOP" class="logo__image">
+                    </a>
+                    <p class="footer__text">Маркетплейс услуг и стройматериалов</p>
+                    <p class="footer__copyright">© 2026 YOHOR SHOP</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">
+                        Навигация</h3>
+                    <ul class="footer__list">
+                        <li><a href="{{ url_for('index') }}">Главная</a></li>
+                        <li><a href="{{ url_for('catalog') }}">Каталог</a></li>
+                        <li><a href="{{ url_for('login') }}">Личный кабинет сотрудника</a></li>
+                        <li><a href="{{ url_for('privacy_policy') }}">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list">
+                        <li>Email: info@company24.com</li>
+                        <li>Телефон: +7 (950) 066-57-19</li>
+                        <li>Город Иркутск, Улица Баррикад</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
