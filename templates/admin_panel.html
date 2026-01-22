@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel – YOHOR SHOP</title>
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="page-bg"></div>
+    <div class="page-gradient"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <a href="{{ url_for('index') }}" class="logo">
+                    <img src="{{ url_for('static', filename='logo.png') }}" alt="YOHOR SHOP" class="logo-img">
+                </a>
+
+                <!-- Кнопка гамбургер меню -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Оверлей для меню -->
+                <div class="menu-overlay" id="menuOverlay"></div>
+
+                <nav class="menu">
+                    <a href="{{ url_for('description') }}" class="pill-link pill-link-primary">О нас</a>
+                    <a href="{{ url_for('catalog') }}" class="pill-link pill-link-primary">Каталог</a>
+                    <a href="{{ url_for('building_materials') }}" class="pill-link pill-link-primary">Стройматериалы</a>
+
+
+                    {% if user_role in ['admin', 'moder'] %}
+
+                    <a href="{{ url_for('admin_tickets', status='active') }}" class="menu-link pill-link">
+                        Тикеты{% if active_tickets_count %} ({{ active_tickets_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('admin_reviews') }}" class="menu-link pill-link">
+                        Отзывы
+                    </a>
+                    <a href="{{ url_for('admin_applications') }}" class="menu-link pill-link">
+                        Заявки{% if active_applications_count %} ({{ active_applications_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('cart') }}" class="menu-link pill-link">
+                        Корзина{% if cart_count %} ({{ cart_count }}){% endif %}
+                    </a>
+                    {% endif %}
+
+                    {% if user_role == 'admin' %}
+                    <a href="{{ url_for('admin_panel') }}" class="menu-link pill-link">
+                        Admin panel
+                    </a>
+                    {% endif %}
+
+                    {% if user_role == 'moder' %}
+                    <a href="{{ url_for('manage_software') }}" class="menu-link pill-link">
+                        Менеджмент товаров
+                    </a>
+                    <a href="{{ url_for('manage_rooms') }}" class="menu-link pill-link">
+                        Менеджмент квартир
+                    </a>
+                    {% endif %}
+
+
+                    {% if user_role in ['admin', 'moder'] %}
+                    <a href="{{ url_for('account') }}" class="pill-link pill-link-primary">Личный кабинет</a>
+                    {% endif %}
+
+
+                    {% if user_role in ['user'] %}
+                    <a href="{{ url_for('support') }}" class="menu-link pill-link">Поддержка</a>
+                    <a href="{{ url_for('cart') }}" class="pill-link pill-link-primary">
+                        Корзина{% if cart_count %} ({{ cart_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('account') }}" class="pill-link pill-link-primary">Личный кабинет</a>
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container" style="max-width: 1040px;">
+                <div class="glass" style="padding: 24px 26px 28px; border-radius: 18px;">
+
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+                        <div>
+                            <h1 style="margin: 0 0 6px; font-size: 22px;">
+                                Admin panel
+                            </h1>
+                            <p style="margin: 0; font-size: 13px; color: var(--text-muted);">
+                                Статистика магазина и служебные действия.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+                        <div class="glass" style="padding: 14px 16px; border-radius: 14px;">
+                            <h3 style="margin: 0 0 4px; font-size: 15px;">Всего покупок</h3>
+                            <p style="margin: 0; font-size: 24px; font-weight: 600;">
+                                {{ stats.total_purchases }}
+                            </p>
+                        </div>
+                        <div class="glass" style="padding: 14px 16px; border-radius: 14px;">
+                            <h3 style="margin: 0 0 4px; font-size: 15px;">Выручка</h3>
+                            <p style="margin: 0; font-size: 24px; font-weight: 600; color: #38bdf8;">
+                                {{ '%.2f'|format(stats.total_revenue) }} ₽
+                            </p>
+                        </div>
+                        <div class="glass" style="padding: 14px 16px; border-radius: 14px;">
+                            <h3 style="margin: 0 0 4px; font-size: 15px;">Активные корзины</h3>
+                            <p style="margin: 0; font-size: 24px; font-weight: 600;">
+                                {{ stats.active_carts }}
+                            </p>
+                        </div>
+                        <div class="glass" style="padding: 14px 16px; border-radius: 14px;">
+                            <h3 style="margin: 0 0 4px; font-size: 15px;">Пользователи</h3>
+                            <p style="margin: 0; font-size: 24px; font-weight: 600;">
+                                {{ stats.total_users }}
+                            </p>
+                        </div>
+                        <div class="glass" style="padding: 14px 16px; border-radius: 14px;">
+                            <h3 style="margin: 0 0 4px; font-size: 15px;">Товаров в каталоге</h3>
+                            <p style="margin: 0; font-size: 24px; font-weight: 600;">
+                                {{ stats.total_software }}
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+                        <div class="glass">
+                            <a href="{{ url_for('manage_software') }}" class="menu-link pill-link"
+                                style="padding: 16px; border-radius: 14px; display: block; margin: 0; font-size: 15px; text-align: center;">
+                                Менеджмент товаров
+                            </a>
+                        </div>
+
+                        <div class="glass">
+                            <a href="{{ url_for('manage_rooms') }}" class="menu-link pill-link"
+                                style="padding: 16px; border-radius: 14px; display: block; margin: 0; font-size: 15px; text-align: center;">
+                                Менеджмент квартир
+                            </a>
+                        </div>
+
+                        <div class="glass">
+                            <a href="{{ url_for('manage_categories') }}" class="menu-link pill-link"
+                                style="padding: 16px; border-radius: 14px; display: block; margin: 0; font-size: 15px; text-align: center;">
+                                Управление категориями стройматериалов
+                            </a>
+                        </div>
+                        <div class="glass" style="border: 1px solid rgba(148, 163, 184, 0.5);">
+                            <a href="{{ url_for('admin_users') }}" class="menu-link pill-link"
+                                style="padding: 16px; border-radius: 14px; display: block; margin: 0; font-size: 15px; text-align: center;">
+                                Управление пользователями
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 24px;" class="glass">
+                        <div style="padding: 16px 18px; border-radius: 14px;">
+                            <h2 style="margin: 0 0 10px; font-size: 18px;">Состояние системы</h2>
+                            <p style="margin: 0 0 10px; font-size: 13px; color: var(--text-muted);">
+                                Краткий обзор ключевых компонентов приложения.
+                            </p>
+
+                            <ul style="list-style: none; margin: 0; padding: 0; font-size: 14px;">
+                                <li style="margin-bottom: 4px;">
+                                    <strong>Статус базы данных:</strong>
+                                    {% if health_status.database_accessible %}
+                                    ✅ Подключено
+                                    {% else %}
+                                    ❌ Недоступно
+                                    {% endif %}
+                                </li>
+                                <li style="margin-bottom: 4px;">
+                                    <strong>Статус Flask:</strong>
+                                    ✅ Работает
+                                </li>
+                                <li>
+                                    <strong>Логирование:</strong>
+                                    ✅ Активно
+                                </li>
+                            </ul>
+
+                            <p style="margin: 10px 0 0; font-size: 13px; color: var(--text-muted);">
+                                Все системы функционируют корректно.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <a href="{{ url_for('index') }}" class="logo logo--footer">
+                        <img src="{{ url_for('static', filename='logo.png') }}" alt="YOHOR SHOP" class="logo__image">
+                    </a>
+                    <p class="footer__text">Маркетплейс недвижимости в Иркутске</p>
+
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Навигация</h3>
+                    <ul class="footer__list">
+                        <li><a href="{{ url_for('index') }}">Главная</a></li>
+                        <li><a href="{{ url_for('description') }}">О нас</a></li>
+                        <li><a href="{{ url_for('catalog') }}">Каталог</a></li>
+                        <li><a href="{{ url_for('login') }}">Личный кабинет сотрудника</a></li>
+                        <li><a href="{{ url_for('privacy_policy') }}">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list">
+                        <li>Email: Yohor9191@mail.ru</li>
+                        <li>Телефон: +7 (950) 066-57-19</li>
+                        <li>Город Иркутск, Улица Баррикад</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copyright">© 2026 YOHOR SHOP</div>
+        </div>
+    </footer>
+    </main>
+
+    <!-- JavaScript для работы меню -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menuToggle');
+            const menu = document.querySelector('.menu'); // Изменено с mainMenu на .menu
+            const menuOverlay = document.getElementById('menuOverlay');
+
+            if (menuToggle && menu) {
+                menuToggle.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    this.classList.toggle('active');
+                    menu.classList.toggle('active');
+                    if (menuOverlay) menuOverlay.classList.toggle('active');
+                    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+                });
+
+                // Закрываем меню при клике на оверлей
+                if (menuOverlay) {
+                    menuOverlay.addEventListener('click', function () {
+                        menuToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        this.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                }
+
+                // Закрываем меню при клике на ссылку
+                const menuLinks = menu.querySelectorAll('a');
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        menuToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        if (menuOverlay) menuOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+
+                // Закрываем меню при изменении ориентации экрана
+                window.addEventListener('orientationchange', function () {
+                    menuToggle.classList.remove('active');
+                    menu.classList.remove('active');
+                    if (menuOverlay) menuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+
+                // Закрываем меню при ресайзе окна (если перешли на десктоп)
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth > 1024) {
+                        menuToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        if (menuOverlay) menuOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

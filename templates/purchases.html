@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои покупки – YOHOR SHOP</title>
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="page-bg"></div>
+    <div class="page-gradient"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <a href="{{ url_for('index') }}" class="logo">
+                    <img src="{{ url_for('static', filename='logo.png') }}" alt="YOHOR SHOP" class="logo-img">
+                </a>
+
+                <!-- Кнопка гамбургер меню -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Оверлей для меню -->
+                <div class="menu-overlay" id="menuOverlay"></div>
+
+                <nav class="menu">
+                    <a href="{{ url_for('description') }}" class="pill-link pill-link-primary">О нас</a>
+                    <a href="{{ url_for('catalog') }}" class="pill-link pill-link-primary">Каталог</a>
+                    <a href="{{ url_for('building_materials') }}" class="pill-link pill-link-primary">Стройматериалы</a>
+
+
+                    {% if user_role in ['admin', 'moder'] %}
+
+                    <a href="{{ url_for('admin_tickets', status='active') }}" class="menu-link pill-link">
+                        Тикеты{% if active_tickets_count %} ({{ active_tickets_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('admin_reviews') }}" class="menu-link pill-link">
+                        Отзывы
+                    </a>
+                    <a href="{{ url_for('admin_applications') }}" class="menu-link pill-link">
+                        Заявки{% if active_applications_count %} ({{ active_applications_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('cart') }}" class="menu-link pill-link">
+                        Корзина{% if cart_count %} ({{ cart_count }}){% endif %}
+                    </a>
+                    {% endif %}
+
+                    {% if user_role == 'admin' %}
+                    <a href="{{ url_for('admin_panel') }}" class="menu-link pill-link">
+                        Admin panel
+                    </a>
+                    {% endif %}
+
+                    {% if user_role == 'moder' %}
+                    <a href="{{ url_for('manage_software') }}" class="menu-link pill-link">
+                        Менеджмент товаров
+                    </a>
+                    <a href="{{ url_for('manage_rooms') }}" class="menu-link pill-link">
+                        Менеджмент квартир
+                    </a>
+                    {% endif %}
+
+
+                    {% if user_role in ['admin', 'moder'] %}
+                    <a href="{{ url_for('account') }}" class="pill-link pill-link-primary">Личный кабинет</a>
+                    {% endif %}
+
+
+                    {% if user_role in ['user'] %}
+                    <a href="{{ url_for('support') }}" class="menu-link pill-link">Поддержка</a>
+                    <a href="{{ url_for('cart') }}" class="pill-link pill-link-primary">
+                        Корзина{% if cart_count %} ({{ cart_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('account') }}" class="pill-link pill-link-primary">Личный кабинет</a>
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container" style="max-width: 960px;">
+                <div class="glass" style="padding: 24px 26px 28px; border-radius: 18px;">
+
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+                        <div>
+                            <h1 style="margin: 0 0 6px; font-size: 22px;">Мои покупки</h1>
+                            <p style="margin: 0; font-size: 13px; color: var(--text-muted);">
+                                История оформленных заказов и услуг.
+                            </p>
+                        </div>
+                        <img src="{{ url_for('static', filename='usericon.png') }}" alt="Профиль" class="logo-img"
+                            style="height: 40px; width: 40px;">
+                    </div>
+
+                    {% if purchases %}
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        {% for p in purchases %}
+                        <article style="
+                                    padding: 12px 14px;
+                                    border-radius: 12px;
+                                    border: 1px solid rgba(148,163,184,0.35);
+                                    background: rgba(15,23,42,0.9);
+                                ">
+                            <a href="{{ url_for('purchase_detail', purchase_id=p['id']) }}" style="display: flex;
+                                          justify-content: space-between;
+                                          gap: 10px;
+                                          text-decoration: none;
+                                          color: inherit;">
+                                <div>
+                                    <p style="margin: 0 0 4px; font-size: 13px; color: var(--text-muted);">
+                                        Заказ № {{ p['id'] }}
+                                    </p>
+                                    <p style="margin: 0 0 8px; font-size: 12px; color: var(--text-muted);">
+                                        {{ p['created_at'] }}
+                                    </p>
+                                    {% if p['items'] %}
+                                    <ul style="list-style: none; margin: 0; padding: 0; font-size: 13px;">
+                                        {% for item in p['items'] %}
+                                        <li style="margin-bottom: 2px;">
+                                            {{ item['name'] }} × {{ item['quantity'] }}
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% endif %}
+                                </div>
+                                <div style="text-align: right; min-width: 150px;">
+                                    <div style="font-size: 12px; color: var(--text-muted);">
+                                        Сумма заказа
+                                    </div>
+                                    <div style="font-size: 18px; font-weight: 700; color: #38bdf8;">
+                                        {{ '%.2f'|format(p['total_price']) }} ₽
+                                    </div>
+                                    {% if p['status'] is defined %}
+                                    <div style="margin-top: 4px; font-size: 12px; color: var(--text-muted);">
+                                        Статус: <strong>{{ p['status'] }}</strong>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </a>
+                        </article>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div style="text-align: center; padding: 32px 24px;">
+                        <p style="font-size: 16px; color: var(--text-muted);">
+                            У вас пока нет оформленных покупок.
+                        </p>
+                        <a href="{{ url_for('catalog') }}" class="btn btn-primary" style="margin-top: 16px;">
+                            Перейти в каталог
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__col">
+                        <a href="{{ url_for('index') }}" class="logo logo--footer">
+                            <img src="{{ url_for('static', filename='logo.png') }}" alt="YOHOR SHOP"
+                                class="logo__image">
+                        </a>
+                        <p class="footer__text">Маркетплейс недвижимости в Иркутске</p>
+
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">Навигация</h3>
+                        <ul class="footer__list">
+                            <li><a href="{{ url_for('index') }}">Главная</a></li>
+                            <li><a href="{{ url_for('description') }}">О нас</a></li>
+                            <li><a href="{{ url_for('catalog') }}">Каталог</a></li>
+                            <li><a href="{{ url_for('login') }}">Личный кабинет сотрудника</a></li>
+                            <li><a href="{{ url_for('privacy_policy') }}">Политика конфиденциальности</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">Контакты</h3>
+                        <ul class="footer__list">
+                            <li>Email: Yohor9191@mail.ru</li>
+                            <li>Телефон: +7 (950) 066-57-19</li>
+                            <li>Город Иркутск, Улица Баррикад</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__copyright">© 2026 YOHOR SHOP</div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- JavaScript для работы меню -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menuToggle');
+            const menu = document.querySelector('.menu'); // Изменено с mainMenu на .menu
+            const menuOverlay = document.getElementById('menuOverlay');
+
+            if (menuToggle && menu) {
+                menuToggle.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    this.classList.toggle('active');
+                    menu.classList.toggle('active');
+                    if (menuOverlay) menuOverlay.classList.toggle('active');
+                    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+                });
+
+                // Закрываем меню при клике на оверлей
+                if (menuOverlay) {
+                    menuOverlay.addEventListener('click', function () {
+                        menuToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        this.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                }
+
+                // Закрываем меню при клике на ссылку
+                const menuLinks = menu.querySelectorAll('a');
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        menuToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        if (menuOverlay) menuOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+
+                // Закрываем меню при изменении ориентации экрана
+                window.addEventListener('orientationchange', function () {
+                    menuToggle.classList.remove('active');
+                    menu.classList.remove('active');
+                    if (menuOverlay) menuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+
+                // Закрываем меню при ресайзе окна (если перешли на десктоп)
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth > 1024) {
+                        menuToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        if (menuOverlay) menuOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
