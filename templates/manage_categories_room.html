@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}Управление категориями комнат - YOHOR SHOP{% endblock %}
+
+{% block content %}
+<div class="container" style="max-width: 960px; margin: 0 auto;">
+    <div class="glass" style="padding: 24px 26px 28px; border-radius: 18px;">
+
+        <!-- Flash сообщения -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div style="margin-bottom: 16px;">
+            {% for category, message in messages %}
+            <div class="flash flash-{{ category }}" style="padding: 10px 15px; margin-bottom: 8px; border-radius: 8px; 
+                      background: {% if category == 'success' %}rgba(34, 197, 94, 0.15){% elif category == 'danger' %}rgba(239, 68, 68, 0.15){% else %}rgba(59, 130, 246, 0.15){% endif %}; 
+                      color: {% if category == 'success' %}#16a34a{% elif category == 'danger' %}#dc2626{% else %}#3b82f6{% endif %}; 
+                      border: 1px solid {% if category == 'success' %}rgba(34, 197, 94, 0.3){% elif category == 'danger' %}rgba(239, 68, 68, 0.3){% else %}rgba(59, 130, 246, 0.3){% endif %}; 
+                      font-size: 13px;">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+            <div>
+                <h1 style="margin: 0 0 6px; font-size: 22px;">
+                    Управление категориями комнат
+                </h1>
+                <p style="margin: 0; font-size: 13px; color: var(--text-muted);">
+                    Добавляйте, изменяйте и удаляйте категории для комнат.
+                </p>
+            </div>
+            {% if user_role == 'admin' %}
+            <a href="{{ url_for('admin_panel') }}" class="btn btn-ghost">
+                ← Назад в админ-панель
+            </a>
+            {% endif %}
+        </div>
+
+        <!-- Форма добавления категории -->
+        <div class="glass" style="padding: 14px 16px; border-radius: 14px; margin-bottom: 16px;">
+            <h2 style="margin: 0 0 8px; font-size: 16px;">Добавить категорию</h2>
+            <form method="POST" action="{{ url_for('add_category_route_room') }}">
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start;">
+                    <input type="text" name="name" placeholder="Название" required style="flex: 0 0 220px; padding: 8px 10px; border-radius: 999px;
+                              border: 1px solid rgba(148,163,184,0.4);
+                              background: rgba(15,23,42,0.9); color: var(--text-main); font-size: 13px;">
+                    <input type="text" name="description" placeholder="Описание (опционально)" style="flex: 1 1 260px; padding: 8px 10px; border-radius: 999px;
+                              border: 1px solid rgba(148,163,184,0.4);
+                              background: rgba(15,23,42,0.9); color: var(--text-main); font-size: 13px;">
+                    <button type="submit" class="btn btn-primary" style="font-size: 13px;">
+                        Добавить
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Таблица категорий -->
+        {% if categories %}
+        <div class="glass" style="border-radius: 14px; overflow: hidden;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+                <thead>
+                    <tr style="background: rgba(15,23,42,0.95);">
+                        <th style="text-align: left; padding: 8px 10px; width: 60px;">ID</th>
+                        <th style="text-align: left; padding: 8px 10px;">Название</th>
+                        <th style="text-align: left; padding: 8px 10px;">Описание</th>
+                        <th style="text-align: left; padding: 8px 10px;">Создана</th>
+                        <th style="text-align: right; padding: 8px 10px;">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in categories %}
+                    <tr style="border-top: 1px solid rgba(148,163,184,0.25);">
+                        <td style="padding: 8px 10px;">{{ c['id'] }}</td>
+                        <td style="padding: 8px 10px;">
+                            <form method="POST" action="{{ url_for('edit_category_route_room', category_id=c['id']) }}"
+                                style="margin: 0;">
+                                <input type="text" name="name" value="{{ c['name'] }}" required style="width: 100%; padding: 6px 8px; border-radius: 999px;
+                                          border: 1px solid rgba(148,163,184,0.4);
+                                          background: rgba(15,23,42,0.9); color: var(--text-main); font-size: 13px;">
+                        </td>
+                        <td style="padding: 8px 10px;">
+                            <input type="text" name="description" value="{{ c['description'] or '' }}" style="width: 100%; padding: 6px 8px; border-radius: 999px;
+                                      border: 1px solid rgba(148,163,184,0.4);
+                                      background: rgba(15,23,42,0.9); color: var(--text-main); font-size: 13px;">
+                        </td>
+                        <td style="padding: 8px 10px;">
+                            {{ c['created_at'][:10] if c['created_at'] and c['created_at']|length > 10 else
+                            c['created_at'] }}
+                        </td>
+                        <td style="padding: 8px 10px; text-align: right; white-space: nowrap;">
+                            <button type="submit" class="btn btn-ghost" style="font-size: 12px; padding: 4px 10px;">
+                                Сохранить
+                            </button>
+                            </form>
+                            <form method="POST"
+                                action="{{ url_for('delete_category_route_room', category_id=c['id']) }}"
+                                style="display: inline-block; margin-left: 4px;"
+                                onsubmit="return confirm('Удалить категорию «{{ c['name'] }}»?');">
+                                <button type="submit" class="btn btn-ghost"
+                                    style="font-size: 12px; padding: 4px 10px; color:#f97373;">
+                                    Удалить
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div style="text-align: center; padding: 40px; background: rgba(15,23,42,0.5); border-radius: 14px;">
+            <p style="font-size: 16px; color: var(--text-muted); margin-bottom: 10px;">
+                Категорий комнат пока нет.
+            </p>
+            <p style="font-size: 14px; color: var(--text-muted);">
+                Используйте форму выше, чтобы добавить первую категорию.
+            </p>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

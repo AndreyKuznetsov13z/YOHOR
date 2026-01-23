@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ room['name'] }} – YOHOR SHOP</title>
+
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="{{ room['name'] }} – YOHOR SHOP">
+    <meta property="og:description" content="{{ room['description'][:200] }}...">
+    {% if room['image_url'] %}
+    <meta property="og:image" content="{{ room['image_url'] }}">
+    {% endif %}
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:type" content="website">
+
+    <!-- Для Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ room['name'] }}">
+    <meta name="twitter:description" content="{{ room['description'][:200] }}...">
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Иконки для соцсетей -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="page-bg"></div>
+    <div class="page-gradient"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <!-- Переносим гамбургер в начало -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Логотип рядом с гамбургером -->
+                <a href="{{ url_for('index') }}" class="logo">
+                    <img src="{{ url_for('static', filename='logo.png') }}" alt="YOHOR SHOP" class="logo-img">
+                </a>
+
+                <!-- Оверлей для меню -->
+                <div class="menu-overlay" id="menuOverlay"></div>
+
+                <nav class="menu">
+                    <a href="{{ url_for('description') }}" class="pill-link pill-link-primary">О нас</a>
+                    <a href="{{ url_for('catalog') }}" class="pill-link pill-link-primary">Каталог</a>
+                    <a href="{{ url_for('building_materials') }}" class="pill-link pill-link-primary">Стройматериалы</a>
+
+
+                    {% if user_role in ['admin', 'moder'] %}
+
+                    <a href="{{ url_for('admin_tickets', status='active') }}" class="menu-link pill-link">
+                        Тикеты{% if active_tickets_count %} ({{ active_tickets_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('admin_reviews') }}" class="menu-link pill-link">
+                        Отзывы
+                    </a>
+                    <a href="{{ url_for('admin_applications') }}" class="menu-link pill-link">
+                        Заявки{% if active_applications_count %} ({{ active_applications_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('cart') }}" class="menu-link pill-link">
+                        Корзина{% if cart_count %} ({{ cart_count }}){% endif %}
+                    </a>
+                    {% endif %}
+
+                    {% if user_role == 'admin' %}
+                    <a href="{{ url_for('admin_panel') }}" class="menu-link pill-link">
+                        Admin panel
+                    </a>
+                    {% endif %}
+
+                    {% if user_role == 'moder' %}
+                    <a href="{{ url_for('manage_software') }}" class="menu-link pill-link">
+                        Менеджмент товаров
+                    </a>
+                    <a href="{{ url_for('manage_rooms') }}" class="menu-link pill-link">
+                        Менеджмент квартир
+                    </a>
+                    {% endif %}
+
+
+                    {% if user_role in ['admin', 'moder'] %}
+                    <a href="{{ url_for('account') }}" class="pill-link pill-link-primary">Личный кабинет</a>
+                    {% endif %}
+
+
+                    {% if user_role in ['user'] %}
+                    <a href="{{ url_for('support') }}" class="menu-link pill-link">Поддержка</a>
+                    <a href="{{ url_for('cart') }}" class="pill-link pill-link-primary">
+                        Корзина{% if cart_count %} ({{ cart_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('account') }}" class="pill-link pill-link-primary">Личный кабинет</a>
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container" style="max-width: 1040px;">
+                <div class="glass product-detail" style="border-radius: 18px; padding: 20px 22px 10px;">
+
+                    <div class="product-detail-header" style="display:flex; gap:16px; align-items:flex-start;">
+                        {% if room['image_url'] %}
+                        <div class="product-image-wrapper">
+                            <div class="zoom-container">
+                                <img id="productImage" src="{{ room['image_url'] }}" alt="{{ room['name'] }}"
+                                    onclick="toggleImageZoom(this)" style="
+                width: 100%;
+                height: auto;
+                max-height: 200px;
+                border-radius: 12px;
+                object-fit: contain;
+                cursor: zoom-in;
+                transition: all 0.3s ease;
+                padding: 8px;">
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <div style="flex:1;">
+                            <h1 style="margin: 0 0 6px; font-size: 22px;">
+                                {{ room['name'] }}
+                            </h1>
+
+                            {% if room['category_name'] %}
+                            <span class="badge badge-blue">
+                                {{ room['category_name'] }}
+                            </span>
+                            {% endif %}
+
+                            {% if room['builder'] %}
+                            <span class="badge badge-blue">
+                                {{ room['builder'] }}
+                            </span>
+                            {% endif %}
+
+                            <div class="product-detail-body">
+                                <div class="product-detail-main">
+                                    <h2 style="margin: 16px 0 6px; font-size: 18px;">Описание</h2>
+                                    <p
+                                        style="margin: 0; font-size: 14px; color: var(--text-muted); white-space: pre-line;">
+                                        {{ room['description'] }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <aside class="product-detail-aside">
+                            <div class="glass" style="border-radius: 14px; ">
+                                <div class="product-detail-aside-inner" style="padding: 14px 16px 18px;">
+                                    <h3 style="margin: 0 0 8px; font-size: 16px;">Покупка</h3>
+
+                                    <p style="margin: 0 0 8px; font-size: 18px; font-weight: 600; color: #ff0000;">
+                                        {{ room['price']|format_price }}
+                                    </p>
+                                    <a href="{{ url_for('index') }}support" class="btn btn-primary aside-btn"
+                                        style="width: 100%; margin-top: 16px;">
+                                        Оставить заявку
+                                    </a>
+
+                                    <!-- Дополнительные кнопки поделиться в сайдбаре -->
+                                    <div class="share-sidebar" style="margin-top: 20px;">
+                                        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 10px;">
+                                            Поделиться:</p>
+                                        <div style="display: flex; gap: 8px; justify-content: center;">
+                                            <button class="share-icon-btn telegram-icon" onclick="shareToTelegram()"
+                                                title="Telegram">
+                                                <i class="fab fa-telegram"></i>
+                                            </button>
+                                            <button class="share-icon-btn vk-icon" onclick="shareToVK()"
+                                                title="ВКонтакте">
+                                                <i class="fab fa-vk"></i>
+                                            </button>
+                                            <button class="share-icon-btn copy-icon" onclick="copyLink()"
+                                                title="Копировать ссылку">
+                                                <i class="fas fa-link"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <a href="{{ url_for('index') }}" class="logo logo--footer">
+                        <img src="{{ url_for('static', filename='logo.png') }}" alt="YOHOR SHOP" class="logo__image">
+                    </a>
+                    <p class="footer__text">Маркетплейс недвижимости в Иркутске</p>
+
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Навигация</h3>
+                    <ul class="footer__list">
+                        <li><a href="{{ url_for('index') }}">Главная</a></li>
+                        <li><a href="{{ url_for('description') }}">О нас</a></li>
+                        <li><a href="{{ url_for('catalog') }}">Каталог</a></li>
+                        <li><a href="{{ url_for('login') }}">Личный кабинет сотрудника</a></li>
+                        <li><a href="{{ url_for('privacy_policy') }}">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list">
+                        <li>Email: Yohor9191@mail.ru</li>
+                        <li>Телефон: +7 (995) 254-79-26</li>
+                        <li>Город Иркутск, Улица Баррикад</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copyright">© 2026 YOHOR SHOP</div>
+        </div>
+    </footer>
+
+    <script>
+        // Функция для получения текущего URL
+        function getCurrentUrl() {
+            return window.location.href;
+        }
+
+        // Функция для получения текста для шеринга
+        function getShareText() {
+            return "Посмотрите эту квартиру на YOHOR SHOP: " + document.title + " - " + getCurrentUrl();
+        }
+
+        // Поделиться в Telegram
+        function shareToTelegram() {
+            const url = "https://t.me/share/url?url=" + encodeURIComponent(getCurrentUrl()) +
+                "&text=" + encodeURIComponent("Посмотрите эту квартиру на YOHOR SHOP: " + document.title);
+            window.open(url, '_blank');
+        }
+
+        // Поделиться ВКонтакте
+        function shareToVK() {
+            const url = "https://vk.com/share.php?url=" + encodeURIComponent(getCurrentUrl()) +
+                "&title=" + encodeURIComponent(document.title) +
+                "&description=" + encodeURIComponent("{{ room['description'][:100] }}...") +
+                "&image=" + encodeURIComponent("{{ room['image_url'] }}");
+            window.open(url, '_blank');
+        }
+
+        // Копировать ссылку в буфер обмена
+        function copyLink() {
+            const url = getCurrentUrl();
+            navigator.clipboard.writeText(url).then(function () {
+                // Показать уведомление
+                showNotification('Ссылка скопирована в буфер обмена!');
+            }).catch(function (err) {
+                // Fallback для старых браузеров
+                const textArea = document.createElement('textarea');
+                textArea.value = url;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showNotification('Ссылка скопирована!');
+            });
+        }
+
+        // Показать уведомление
+        function showNotification(message) {
+            // Удаляем старое уведомление если есть
+            const oldNotification = document.querySelector('.copy-notification');
+            if (oldNotification) {
+                oldNotification.remove();
+            }
+
+            // Создаем новое уведомление
+            const notification = document.createElement('div');
+            notification.className = 'copy-notification';
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: rgba(15, 23, 42, 0.95);
+                color: white;
+                padding: 12px 20px;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                z-index: 10000;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                animation: slideIn 0.3s ease;
+                backdrop-filter: blur(10px);
+            `;
+
+            document.body.appendChild(notification);
+
+            // Убираем через 3 секунды
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // Добавляем стили для анимации уведомлений
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOut {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+            
+            /* Стили для кнопок поделиться */
+            .share-btn {
+                padding: 8px 15px;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 500;
+                transition: all 0.2s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: white;
+            }
+            
+            .share-btn i {
+                font-size: 16px;
+            }
+            
+            .telegram-btn {
+                background: #0088cc;
+            }
+            
+            .telegram-btn:hover {
+                background: #0077b5;
+                transform: translateY(-2px);
+            }
+            
+            .vk-btn {
+                background: #4C75A3;
+            }
+            
+            .vk-btn:hover {
+                background: #3b5c8a;
+                transform: translateY(-2px);
+            }
+            
+            .copy-btn {
+                background: #6B7280;
+            }
+            
+            .copy-btn:hover {
+                background: #4B5563;
+                transform: translateY(-2px);
+            }
+            
+            /* Кнопки-иконки для сайдбара */
+            .share-icon-btn {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                color: white;
+                transition: all 0.2s ease;
+            }
+            
+            .telegram-icon {
+                background: #0088cc;
+            }
+            
+            .vk-icon {
+                background: #4C75A3;
+            }
+            
+            .copy-icon {
+                background: #6B7280;
+            }
+            
+            .share-icon-btn:hover {
+                transform: scale(1.1);
+            }
+            
+            /* Адаптивность для кнопок */
+            @media (max-width: 768px) {
+                .share-buttons {
+                    flex-direction: column;
+                }
+                
+                .share-btn {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+    <!-- Остальные скрипты (зум и меню) без изменений -->
+    <script>
+        function toggleImageZoom(img) {
+            // ... ваш существующий код зума ...
+        }
+    </script>
+
+    <script>
+        // ... ваш существующий код меню ...
+    </script>
+</body>
+
+</html>

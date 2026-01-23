@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тикеты поддержки – YOHOR SHOP</title>
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="page-bg"></div>
+    <div class="page-gradient"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <a href="{{ url_for('index') }}" class="logo">
+                    <img src="{{ url_for('static', filename='logo.png') }}" alt="YOHOR SHOP" class="logo-img">
+                </a>
+
+                <!-- Кнопка гамбургер меню -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Оверлей для меню -->
+                <div class="menu-overlay" id="menuOverlay"></div>
+
+                <nav class="menu">
+                    <a href="{{ url_for('description') }}" class="pill-link pill-link-primary">О нас</a>
+                    <a href="{{ url_for('catalog') }}" class="pill-link pill-link-primary">Каталог</a>
+                    <a href="{{ url_for('building_materials') }}" class="pill-link pill-link-primary">Стройматериалы</a>
+
+
+                    {% if user_role in ['admin', 'moder'] %}
+
+                    <a href="{{ url_for('admin_tickets', status='active') }}" class="menu-link pill-link">
+                        Тикеты{% if active_tickets_count %} ({{ active_tickets_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('admin_reviews') }}" class="menu-link pill-link">
+                        Отзывы
+                    </a>
+                    <a href="{{ url_for('admin_applications') }}" class="menu-link pill-link">
+                        Заявки{% if active_applications_count %} ({{ active_applications_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('cart') }}" class="menu-link pill-link">
+                        Корзина{% if cart_count %} ({{ cart_count }}){% endif %}
+                    </a>
+                    {% endif %}
+
+                    {% if user_role == 'admin' %}
+                    <a href="{{ url_for('admin_panel') }}" class="menu-link pill-link">
+                        Admin panel
+                    </a>
+                    {% endif %}
+
+                    {% if user_role == 'moder' %}
+                    <a href="{{ url_for('manage_software') }}" class="menu-link pill-link">
+                        Менеджмент товаров
+                    </a>
+                    <a href="{{ url_for('manage_rooms') }}" class="menu-link pill-link">
+                        Менеджмент квартир
+                    </a>
+                    {% endif %}
+
+
+                    {% if user_role in ['admin', 'moder'] %}
+                    <a href="{{ url_for('account') }}" class="pill-link pill-link-primary">Личный кабинет</a>
+                    {% endif %}
+
+
+                    {% if user_role in ['user'] %}
+                    <a href="{{ url_for('support') }}" class="menu-link pill-link">Поддержка</a>
+                    <a href="{{ url_for('cart') }}" class="pill-link pill-link-primary">
+                        Корзина{% if cart_count %} ({{ cart_count }}){% endif %}
+                    </a>
+                    <a href="{{ url_for('account') }}" class="pill-link pill-link-primary">Личный кабинет</a>
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container" style="max-width: 1120px;">
+                <div class="glass" style="padding: 24px 26px 28px; border-radius: 18px;">
+
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+                        <div>
+                            <h1 style="margin: 0 0 6px; font-size: 22px;">
+                                Тикеты поддержки
+                            </h1>
+                            <p style="margin: 0; font-size: 13px; color: var(--text-muted);">
+                                Обрабатывайте обращения пользователей и изменяйте их статусы.
+                            </p>
+                        </div>
+                        {% if user_role == 'admin' %}
+                        <a href="{{ url_for('admin_panel') }}" class="btn btn-ghost">
+                            ← Назад в админ-панель
+                        </a>
+                        {% endif %}
+                    </div>
+
+                    <div style=" margin-bottom: 12px; display: flex; gap: 8px; flex-wrap: wrap; font-size: 13px; ">
+                        {% set statuses = [
+                        ('active', 'Активные'),
+                        ('new', 'Новые'),
+                        ('in_progress', 'В работе'),
+                        ('closed', 'Закрытые'),
+                        ('all', 'Все')
+                        ] %}
+                        {% for code, label in statuses %}
+                        <a href="{{ url_for('admin_tickets', status=code) }}"
+                            class="pill-link {% if current_status == code %}pill-link-primary{% else %}pill-link-soft{% endif %}"
+                            style="padding: 6px 12px; font-size: 13px; color: rgb(255, 255, 255); ">
+                            {{ label }}
+                        </a>
+                        {% endfor %}
+                    </div>
+
+                    {% if tickets %}
+                    <div class="glass" style="border-radius: 14px; overflow: hidden;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+                            <thead>
+                                <tr style="background: rgba(15,23,42,0.95);">
+                                    <th style="text-align: left; padding: 8px 10px;">ID</th>
+                                    <th style="text-align: left; padding: 8px 10px;">Пользователь</th>
+                                    <th style="text-align: left; padding: 8px 10px;">Телефон</th>
+                                    <th style="text-align: left; padding: 8px 10px;">Тема</th>
+                                    <th style="text-align: left; padding: 8px 10px;">Сообщение</th>
+                                    <th style="text-align: left; padding: 8px 10px;">Статус</th>
+                                    <th style="text-align: left; padding: 8px 10px;">Создан</th>
+                                    <th style="text-align: right; padding: 8px 10px;">Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for t in tickets %}
+                                <tr style="border-top: 1px solid rgba(148,163,184,0.25);">
+                                    <td style="padding: 8px 10px;">{{ t['id'] }}</td>
+                                    <td style="padding: 8px 10px;">{{ t['name'] }}</td>
+                                    <td style="padding: 8px 10px;">{{ t['email'] }}</td>
+                                    <td style="padding: 8px 10px;">{{ t['subject'] }}</td>
+                                    <td style="padding: 8px 10px; max-width: 280px;">
+                                        <span
+                                            style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                                            {{ t['message'] }}
+                                        </span>
+                                    </td>
+                                    <td style="padding: 8px 10px;">
+                                        {% if t['status'] == 'new' %}
+                                        <span style="color:#38bdf8;">Новый</span>
+                                        {% elif t['status'] == 'in_progress' %}
+                                        <span style="color:#eab308;">В работе</span>
+                                        {% else %}
+                                        <span style="color:#22c55e;">Закрыт</span>
+                                        {% endif %}
+                                    </td>
+                                    <td style="padding: 8px 10px;">{{ t['created_at'] }}</td>
+                                    <td style="padding: 8px 10px; text-align: right; white-space: nowrap;">
+                                        <form method="post"
+                                            action="{{ url_for('admin_ticket_change_status', ticket_id=t['id'], status=current_status) }}"
+                                            style="display: inline-block;">
+                                            <select name="status" onchange="this.form.submit()" style="padding: 3px 6px; border-radius: 999px;
+                                                           border: 1px solid rgba(148,163,184,0.5);
+                                                           background: rgba(15,23,42,0.95);
+                                                           color: var(--text-main); font-size: 12px;">
+                                                <option value="new" {% if t['status']=='new' %}selected{% endif %}>new
+                                                </option>
+                                                <option value="in_progress" {% if t['status']=='in_progress'
+                                                    %}selected{% endif %}>in_progress</option>
+                                                <option value="closed" {% if t['status']=='closed' %}selected{% endif
+                                                    %}>closed</option>
+                                            </select>
+                                        </form>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <p style="font-size: 14px; color: var(--text-muted);">
+                        Тикетов с выбранным статусом пока нет.
+                    </p>
+                    {% endif %}
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <a href="{{ url_for('index') }}" class="logo logo--footer">
+                        <img src="{{ url_for('static', filename='logo.png') }}" alt="YOHOR SHOP" class="logo__image">
+                    </a>
+                    <p class="footer__text">Маркетплейс недвижимости в Иркутске</p>
+
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Навигация</h3>
+                    <ul class="footer__list">
+                        <li><a href="{{ url_for('index') }}">Главная</a></li>
+                        <li><a href="{{ url_for('description') }}">О нас</a></li>
+                        <li><a href="{{ url_for('catalog') }}">Каталог</a></li>
+                        <li><a href="{{ url_for('login') }}">Личный кабинет сотрудника</a></li>
+                        <li><a href="{{ url_for('privacy_policy') }}">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list">
+                        <li>Email: Yohor9191@mail.ru</li>
+                        <li>Телефон: +7 (995) 254-79-26</li>
+                        <li>Город Иркутск, Улица Баррикад</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copyright">© 2026 YOHOR SHOP</div>
+        </div>
+    </footer>
+    </main>
+
+    <!-- JavaScript для работы меню -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menuToggle');
+            const menu = document.querySelector('.menu'); // Изменено с mainMenu на .menu
+            const menuOverlay = document.getElementById('menuOverlay');
+
+            if (menuToggle && menu) {
+                menuToggle.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    this.classList.toggle('active');
+                    menu.classList.toggle('active');
+                    if (menuOverlay) menuOverlay.classList.toggle('active');
+                    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+                });
+
+                // Закрываем меню при клике на оверлей
+                if (menuOverlay) {
+                    menuOverlay.addEventListener('click', function () {
+                        menuToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        this.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                }
+
+                // Закрываем меню при клике на ссылку
+                const menuLinks = menu.querySelectorAll('a');
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        menuToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        if (menuOverlay) menuOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+
+                // Закрываем меню при изменении ориентации экрана
+                window.addEventListener('orientationchange', function () {
+                    menuToggle.classList.remove('active');
+                    menu.classList.remove('active');
+                    if (menuOverlay) menuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+
+                // Закрываем меню при ресайзе окна (если перешли на десктоп)
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth > 1024) {
+                        menuToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        if (menuOverlay) menuOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
